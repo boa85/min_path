@@ -13,6 +13,8 @@ set(SOURCE_FILES
         args_parser/src/argument_parser.cpp
         args_parser/include/argument_parser.hpp
         args_parser/src/args_parse_exception.cpp
-        args_parser/include/args_parse_exception.hpp)
+        args_parser/include/args_parse_exception.hpp
+        service/src/service.cpp
+        service/include/service.hpp)
 add_executable(min_path main.cpp ${SOURCE_FILES})
 target_link_libraries(min_path ${Boost_LIBRARIES})
