@@ -55,7 +55,7 @@ namespace min_path {
              * @brief start - run command execution of the command
              * @param command - command to be executed
              */
-            void start(std::shared_ptr<ICommand> command);
+            void start(std::shared_ptr<ICommand> &command);
 
 
         }//namespace command_handler

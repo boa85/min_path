@@ -15,6 +15,11 @@ set(SOURCE_FILES
         args_parser/src/args_parse_exception.cpp
         args_parser/include/args_parse_exception.hpp
         service/src/service.cpp
-        service/include/service.hpp)
+        service/include/service.hpp
+        command_handler/src/command_handler.cpp
+        command_handler/include/command_handler.hpp
+        command_handler/src/invoker.cpp
+        command_handler/include/invoker.hpp
+        command_handler/include/icommand.hpp)
 add_executable(min_path main.cpp ${SOURCE_FILES})
 target_link_libraries(min_path ${Boost_LIBRARIES})

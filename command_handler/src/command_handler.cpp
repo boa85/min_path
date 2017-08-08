@@ -8,7 +8,7 @@ namespace min_path {
 
     namespace command_handler {
 
-        void CommandHandler::start(std::shared_ptr<ICommand> command) {
+        void CommandHandler::start(std::shared_ptr<ICommand> &command) {
             command->execute();
         }//start
 
