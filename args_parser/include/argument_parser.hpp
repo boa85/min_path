@@ -9,10 +9,13 @@
 #include <boost/signals2.hpp>
 #include <iostream>
 
+#include "../../service/include/service.hpp"
 
 
 namespace min_path {
+
     namespace argument_parser {
+        using namespace service;
         namespace po=boost::program_options;
         namespace bs=boost::signals2;
 
@@ -27,11 +30,14 @@ namespace min_path {
             ArgumentParser();
 
             /**
-             * @brief findMinPath
-             * @param inVertex
-             * @param outVertex
+             * @brief findMinPath - the program switching signal to the @mode
+             * @mode - normal mode - using the Dijkstra algorithm, negative - using the Ford-Bellman algorithm
+             * @filename - input filename
+             * @inVertex - input vertex number
+             * @outVertex - output vertex number
              */
-            bs::signal<void(const unsigned int inVertex, const unsigned int outVertex)> findMinPath;
+            bs::signal<void(const PROGRAM_MODE mode, const std::string &filename, const unsigned int inVertex,
+                            const unsigned int outVertex)> findMinPath;
 
 
         private:
@@ -78,7 +84,9 @@ namespace min_path {
              */
             void startParsing(int argc, char *argv[]);
         };//class ArgumentParser
+
     }// argument_parser
+
 }//min_path
 
 
