@@ -13,5 +13,7 @@ namespace min_path {
         bool isValidFile(const std::string &filename, boost::system::error_code &errorCode) {
             return (fs::exists(filename, errorCode) && fs::is_regular(filename, errorCode));
         }// isValidFile
+
     }//namespace service
+
 }//namespace min_path
