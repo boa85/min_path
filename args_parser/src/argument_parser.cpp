@@ -12,7 +12,7 @@ namespace min_path {
 
         ArgumentParser::ArgumentParser() : generalDescription_("program options") {
             initDescriptions();
-        }
+        }//ArgumentParser
 
         void ArgumentParser::initDescriptions() {
             generalDescription_.add_options()
@@ -31,7 +31,7 @@ namespace min_path {
                     ("file,f", po::value<std::string>(), "input filename, e.g. Test.tst")
                     ("i,input", po::value<unsigned int>(), " input vertex")
                     ("o,out", po::value<unsigned int>(), " output vertex");
-        }
+        }//initDescriptions
 
         void ArgumentParser::prepareFindMinimumPathMode(const po::variables_map &vm) {
             std::string filename;//filename
@@ -70,22 +70,24 @@ namespace min_path {
             }
 
             boost::system::error_code errorCode;
-/*
             if (isValidFile(filename, errorCode)) {//if a file exists and it is a regular file
-                countOccurrencesWord(filename, word);//sent command to run program in WORD_COUNT mode
+//                countOccurrencesWord(filename, word);//sent command to run program in WORD_COUNT mode
             } else {
                 error("invalid value " + filename + " " + errorCode.message());
             }
-*/
 
-        }
+        }//prepareFindMinimumPathMode
 
         void ArgumentParser::error(const std::string &errorMessage) {
             std::cout << errorMessage << std::endl << "See help " << std::endl << generalDescription_ << std::endl;
             throw ArgsParseException(errorMessage);
-        }
+        }//error
 
         void ArgumentParser::startParsing(int argc, char *argv[]) {
+            /** Concrete variables map which store variables in real map.
+             * This class is derived from std::map<std::string, variable_value>,
+             * so you can use all map operators to examine its content.
+            */
             po::variables_map vm;//
             po::parsed_options parsed =//magic
                     po::command_line_parser(argc, argv).options(generalDescription_).allow_unregistered().run();
@@ -107,6 +109,8 @@ namespace min_path {
                 error("unknown program mode");
             }
 
-        }
+        }// startParsing
+
     }// argument_parser
+
 }//min_path
