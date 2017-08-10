@@ -36,8 +36,10 @@ namespace min_path {
              * @outVertex - output vertex number
              */
             bs::signal<void(const std::string &filename, const unsigned int inVertex,
-                            const unsigned int outVertex)> findMinPath;
+                            const unsigned int outVertex)> findShortestPath;
 
+            bs::signal<void(const std::string &filename, const unsigned int vertexNumber,
+                            const unsigned int probability)> generateGraph;
 
         private:
             /**
@@ -46,13 +48,17 @@ namespace min_path {
             po::options_description generalDescription_;
 
             /**
-             * @brief findMinPathDescription_ -Description of the minimum path search mode
+             * @brief findMinPathDescription_ - description of the shortest path search mode
              */
-            po::options_description findMinPathDescription_;
-
+            po::options_description findShortestPathModeDescription_;
 
             /**
-             * @brief mode_ - string program mode: path
+             * @brief generateGraphDescription_ - description of the generate graph mode
+             */
+            po::options_description generateGraphModeDescription_;
+
+            /**
+             * @brief mode_ - string program mode
              */
             std::string mode_;
 
@@ -63,11 +69,16 @@ namespace min_path {
             void initDescriptions();
 
             /**
-             * @brief prepareWordCountMode -  checks the correctness of the mode parameters and sent command to run mode
+             * @brief prepareWordCountMode - checks the correctness of the mode parameters and sent command to run mode
              * @param vm - boost::program_options variable map with program arguments
              */
             void prepareFindMinimumPathMode(const po::variables_map &vm);
 
+            /**
+             * @brief prepareGenerateGraphMode - checks the correctness of the mode parameters and sent command to run mode
+             * @param vm - boost::program_options variable map with program arguments
+             */
+            void prepareGenerateGraphMode(const po::variables_map &vm);
 
             /**
              * @brief error - error handler method
@@ -82,11 +93,18 @@ namespace min_path {
              * @param argv  - values of arguments
              */
             void startParsing(int argc, char *argv[]);
+
+            const unsigned int MINIMUM_VERTEX_NUMBER = 3;
+
+            const std::string SHORTEST_PATH = "minpath";
+
+            const std::string GENERATE_GRAPH = "generate";
+
         };//class ArgumentParser
 
-    }// argument_parser
+    }//namespace argument_parser
 
-}//min_path
+}//namespace min_path
 
 
 
