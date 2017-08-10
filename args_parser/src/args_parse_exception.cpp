@@ -16,5 +16,6 @@ namespace min_path {
         ArgsParseException::ArgsParseException(const char *message)
                 : std::logic_error(message) {}
 
-    }// argument_parser
-}//min_path
+    }//namespace argument_parser
+
+}//namespace min_path

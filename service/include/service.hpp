@@ -12,10 +12,6 @@
 namespace min_path {
     namespace service {
 
-        enum class PROGRAM_MODE {
-            NORMAL = 1,
-            NEGATIVE
-        };
 
         /**
          * @brief isValidFile - checks the existence of the file and its status
