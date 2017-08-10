@@ -20,6 +20,10 @@ set(SOURCE_FILES
         command_handler/include/command_handler.hpp
         command_handler/src/invoker.cpp
         command_handler/include/invoker.hpp
-        command_handler/include/icommand.hpp command_handler/src/generate_graph_command.cpp command_handler/include/generate_graph_command.hpp command_handler/src/shortest_path_command.cpp command_handler/include/shortest_path_command.hpp)
+        command_handler/include/icommand.hpp
+        command_handler/src/generate_graph_command.cpp
+        command_handler/include/generate_graph_command.hpp
+        command_handler/src/shortest_path_command.cpp
+        command_handler/include/shortest_path_command.hpp)
 add_executable(min_path main.cpp ${SOURCE_FILES})
 target_link_libraries(min_path ${Boost_LIBRARIES})
