@@ -17,10 +17,11 @@ namespace min_path {
     namespace command_handler {
 
         /**
- * @class CommandHandler  - in classical description (GoF) Receiver, executes commands
- */
+         * @class CommandHandler  - in classical description (GoF) Receiver, executes commands
+         */
         class CommandHandler {
         public:
+
             /**
              * @brief CommandHandler - constructor
              */
@@ -57,14 +58,12 @@ namespace min_path {
              */
             void start(std::shared_ptr<ICommand> &command);
 
+        };//class CommandHandler
 
-        }//namespace command_handler
+    }//namespace command_handler
 
-    }//namespace min_path
+}//namespace min_path
 
-    class command_handler {
-
-    };
 
 
 #endif //MIN_PATH_COMMAND_HANDLER_HPP
