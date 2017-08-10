@@ -36,14 +36,14 @@ namespace min_path {
              */
             ICommand(ICommand &&) = default;
 
-            virtual /**
-             * @brief operator= copy assignment operator
-             */
+            /**
+            * @brief operator= copy assignment operator
+            */
             ICommand &operator=(const ICommand &) = default;
 
-            virtual /**
-             * @brief operator= move assignment operator
-             */
+            /**
+            * @brief operator= move assignment operator
+            */
             ICommand &operator=(ICommand &&) = default;
 
             /**
