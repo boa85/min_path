@@ -6,13 +6,15 @@ namespace min_path {
 
     namespace command_handler {
 
-        ShortestPathCommand::~ShortestPathCommand() {
 
-        }
+        FindShortestPathCommand::FindShortestPathCommand(const std::string &filename, const unsigned int inVertex,
+                                                         const unsigned int outVertex) : filename_(filename),
+                                                                                         inVertex_(inVertex),
+                                                                                         outVertex_(outVertex) {}
 
-        void ShortestPathCommand::execute() {
+        void FindShortestPathCommand::execute() {
 
-        }
+        }//execute
 
 
     }//namespace command_handler
