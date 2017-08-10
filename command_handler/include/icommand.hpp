@@ -36,12 +36,12 @@ namespace min_path {
              */
             ICommand(ICommand &&) = default;
 
-            /**
+            virtual /**
              * @brief operator= copy assignment operator
              */
             ICommand &operator=(const ICommand &) = default;
 
-            /**
+            virtual /**
              * @brief operator= move assignment operator
              */
             ICommand &operator=(ICommand &&) = default;
@@ -50,10 +50,11 @@ namespace min_path {
              * @brief execute - pure virtual method, override in derived classes
              */
             virtual void execute() = 0;
+        };
 
-        }//namespace command_handler
+    }//namespace command_handler
 
-    }//namespace min_path
+} //namespace min_path
 
 
 
