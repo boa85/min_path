@@ -34,9 +34,19 @@ namespace min_path {
             ArgsParseException(const ArgsParseException &) = default;
 
             /**
-             * @param ArgsParseException - copy assignment operator
+             * @brief ArgsParseException - copy assignment operator
              */
             ArgsParseException &operator=(const ArgsParseException &) = default;
+
+            /**
+             * @brief ArgsParseException - move constructor
+             */
+            ArgsParseException(ArgsParseException &&) = default;
+
+            /**
+             * @brief ArgsParseException - move assignment operator
+             */
+            ArgsParseException &operator=(ArgsParseException &&) = default;
 
             /**
              * @brief ArgsParseException - destructor
@@ -49,9 +59,12 @@ namespace min_path {
              * the current error (the same string passed to the ctor).
              */
             const char *what() const throw() override;
+
         };//class ArgsParseException
-    }// argument_parser
-}//min_path
+
+    }//namespace argument_parser
+
+}//namespace min_path
 
 
 
