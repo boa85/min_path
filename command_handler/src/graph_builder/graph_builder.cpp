@@ -32,6 +32,11 @@ namespace min_path {
 
         }//build
 
+        std::shared_ptr<Graph> GraphBuilder::getGraph() {
+            return build();
+        }
+
+
     }//namespace graph_builder
 
 }//namespace min_path
