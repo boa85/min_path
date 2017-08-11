@@ -42,7 +42,7 @@ namespace min_path {
 
             GraphBuilder &operator=(GraphBuilder &&) = default;
 
-
+            std::shared_ptr<Graph> getGraph();
         private:
             std::string filename_;
 
