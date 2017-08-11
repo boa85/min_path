@@ -11,13 +11,16 @@ namespace min_path {
         GraphBuilder::GraphBuilder(const std::string &filename)
                 : filename_(filename) {}
 
-        std::shared_ptr<Graph> GraphBuilder::build() {
-            auto graph = std::make_shared<Graph>();
+        std::shared_ptr<EdgesListGraphView> GraphBuilder::buildEdgesListGraphView() {
+            auto graph = std::make_shared<EdgesListGraphView>();
             std::ifstream input(filename_);
             std::string line;
-            while (getline(input, line)) {
+            while (getline(input, line)) {//read next line
                 std::vector<std::string> array;
                 boost::algorithm::split(array, line, boost::is_any_of(":"));
+                if (array.size() != 3) {
+                    throw std::invalid_argument("invalid data format");
+                }
                 Edge edge{};
                 edge.inVertex = std::stoi(array[0]);
                 edge.cost = std::stoi(array[1]);
@@ -30,11 +33,27 @@ namespace min_path {
             input.close();
             return graph;
 
-        }//build
+        }//buildEdgesListGraphView
 
-        std::shared_ptr<Graph> GraphBuilder::getGraph() {
-            return build();
+        void GraphBuilder::getGraph(const GRAPH_FORMAT &graphFormat) {
+            switch (graphFormat) {
+                case GRAPH_FORMAT::EDGE_LIST: {
+                    auto graph = buildEdgesListGraphView();
+                    edgesListGraph(graph);
+                    break;
+                }
+                case GRAPH_FORMAT::ADJACENCY_MATRIX: {
+                    auto graph = buildAdjacencyMatrixGraphView();
+                    adjacecyMatrixGraph(graph);
+                    break;
+                }
+            }
         }
+
+        std::shared_ptr<AdjacencyMatrixGraphView> GraphBuilder::buildAdjacencyMatrixGraphView() {
+            return std::make_shared<AdjacencyMatrixGraphView>();
+        }
+//getGraph
 
 
     }//namespace graph_builder

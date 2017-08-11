@@ -8,7 +8,6 @@ namespace min_path {
 
     namespace service {
 
-        namespace fs=boost::filesystem;
 
         bool isValidFile(const std::string &filename, boost::system::error_code &errorCode) {
             return (fs::exists(filename, errorCode) && fs::is_regular(filename, errorCode));
