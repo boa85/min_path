@@ -24,6 +24,8 @@ set(SOURCE_FILES
         command_handler/src/generate_graph_command.cpp
         command_handler/include/generate_graph_command.hpp
         command_handler/src/shortest_path_command.cpp
-        command_handler/include/shortest_path_command.hpp)
+        command_handler/include/shortest_path_command.hpp
+        command_handler/src/graph_builder/graph_builder.cpp
+        command_handler/include/graph_builder/graph_builder.hpp)
 add_executable(min_path main.cpp ${SOURCE_FILES})
 target_link_libraries(min_path ${Boost_LIBRARIES})
