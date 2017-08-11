@@ -60,7 +60,7 @@ namespace min_path {
 
             bs::signal<void(std::shared_ptr<EdgesListGraphView>)> edgesListGraph;
 
-            bs::signal<void(std::shared_ptr<AdjacencyMatrixGraphView>)> adjacecyMatrixGraph;
+            bs::signal<void(std::shared_ptr<AdjacencyMatrixGraphView>)> adjacencyMatrixGraph;
         private:
 
             /**
@@ -74,6 +74,8 @@ namespace min_path {
             std::shared_ptr<EdgesListGraphView> buildEdgesListGraphView();
 
             std::shared_ptr<AdjacencyMatrixGraphView> buildAdjacencyMatrixGraphView();
+
+            bool isValidGragh(const unsigned int vertex, const unsigned int edge);
         };//class GraphBuilder
 
     }//namespace graph_builder

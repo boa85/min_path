@@ -44,7 +44,7 @@ namespace min_path {
                 }
                 case GRAPH_FORMAT::ADJACENCY_MATRIX: {
                     auto graph = buildAdjacencyMatrixGraphView();
-                    adjacecyMatrixGraph(graph);
+                    adjacencyMatrixGraph(graph);
                     break;
                 }
             }
@@ -52,6 +52,10 @@ namespace min_path {
 
         std::shared_ptr<AdjacencyMatrixGraphView> GraphBuilder::buildAdjacencyMatrixGraphView() {
             return std::make_shared<AdjacencyMatrixGraphView>();
+        }
+
+        bool GraphBuilder::isValidGragh(const unsigned int vertex, const unsigned int edge) {
+            return (edge <= ((vertex * (vertex - 1)) / 2));//max edges count = n(n-1)/2, n - number of vertex
         }
 //getGraph
 
