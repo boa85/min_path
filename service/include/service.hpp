@@ -8,9 +8,33 @@
 #include <vector>
 #include <string>
 #include <boost/filesystem.hpp>
+#include <boost/signals2.hpp>
+#include <boost/program_options.hpp>
 
 namespace min_path {
     namespace service {
+        namespace bs=boost::signals2;
+        namespace po=boost::program_options;
+        namespace fs=boost::filesystem;
+
+        struct Edge {
+            int inVertex;
+            int outVertex;
+            int cost;
+
+            bool isValid() {
+                return inVertex > 0 && outVertex > 0;
+            }
+        };
+
+        enum class GRAPH_FORMAT {
+            EDGE_LIST,
+            ADJACENCY_MATRIX
+        };
+
+        using EdgesListGraphView = std::list<Edge>;
+
+        using AdjacencyMatrixGraphView = std::vector<std::vector<int> >;
 
 
         /**
