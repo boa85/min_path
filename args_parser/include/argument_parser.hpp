@@ -16,8 +16,7 @@ namespace min_path {
 
     namespace argument_parser {
         using namespace service;
-        namespace po=boost::program_options;
-        namespace bs=boost::signals2;
+
 
         /**
          * @class ArgumentParser - command line arguments parser, based on boost::program_options
