@@ -23,7 +23,7 @@ namespace min_path {
                 edge.cost = std::stoi(array[1]);
                 edge.outVertex = std::stoi(array[2]);
                 if (!edge.isValid()) {
-                    throw std::invalid_argument("invalid value");
+                    throw std::invalid_argument("invalid value edge");
                 }
                 graph->push_back(edge);
             }
