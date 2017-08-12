@@ -21,7 +21,6 @@ namespace min_path {
             int inVertex;
             int outVertex;
             int cost;
-
             bool isValid() {
                 return inVertex > 0 && outVertex > 0;
             }
@@ -32,7 +31,7 @@ namespace min_path {
             ADJACENCY_MATRIX
         };
 
-        using EdgesListGraphView = std::list<Edge>;
+        using EdgesListGraphView = std::vector<Edge>;
 
         using AdjacencyMatrixGraphView = std::vector<std::vector<int> >;
 
