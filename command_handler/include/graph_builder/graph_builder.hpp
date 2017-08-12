@@ -34,9 +34,9 @@ namespace min_path {
             ~GraphBuilder() = default;
 
             /**
-             * @brief GraphBuilder - copy constructor
+             * @brief GraphBuilder - copy constructor, is forbidden  because the signals are not copied
              */
-            GraphBuilder(const GraphBuilder &) = default;
+            GraphBuilder(const GraphBuilder &) = delete;
 
             /**
              * @brief GraphBuilder - move constructor
@@ -44,9 +44,9 @@ namespace min_path {
             GraphBuilder(GraphBuilder &&) = default;
 
             /**
-             * @brief - copy assignment operator
+             * @brief - copy assignment operator, is forbidden  because the signals are not copied
              */
-            GraphBuilder &operator=(const GraphBuilder &) = default;
+            GraphBuilder &operator=(const GraphBuilder &) = delete;
 
             /**
              * @brief move assignment operator
@@ -58,7 +58,7 @@ namespace min_path {
              */
             void getGraph(const GRAPH_FORMAT &graphFormat);
 
-            bs::signal<void(std::shared_ptr<EdgesListGraphView>)> edgesListGraph;
+            bs::signal<void(std::shared_ptr<EdgesListGraphView>, int, unsigned long)> edgesListGraph;
 
             bs::signal<void(std::shared_ptr<AdjacencyMatrixGraphView>)> adjacencyMatrixGraph;
         private:
@@ -67,15 +67,33 @@ namespace min_path {
              * @brief filename_ - input filename
              */
             std::string filename_;
+            /**
+             * @brief vertexCount_ - number of vertices in the graph
+             */
+            int vertexCount_;
+            /**
+             * @brief edgeCount - number of edges in the graph
+             */
+            unsigned long edgeCount_;
 
             /**
-             * @brief build build a graph  from the input data read from the file
+             * @brief buildEdgesListGraphView - build a graph as list of edges  from the input data read from the file
              */
             std::shared_ptr<EdgesListGraphView> buildEdgesListGraphView();
 
+            /**
+             * @brief buildAdjacencyMatrixGraphView - build a graph as adjacency matrix  from the input data read from the file
+             */
             std::shared_ptr<AdjacencyMatrixGraphView> buildAdjacencyMatrixGraphView();
 
-            bool isValidGragh(const unsigned int vertex, const unsigned int edge);
+            /**
+             * @brief isValidGraph
+             * @param vertex - number of vertices
+             * @param edge - number of edges
+             * @return  - true, if edgesNumber(max of edges number in the
+             * ) <= n(n - 1)/2,
+             */
+            bool isValidGraph(int vertex, unsigned long edge);
         };//class GraphBuilder
 
     }//namespace graph_builder
