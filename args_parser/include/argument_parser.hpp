@@ -29,6 +29,31 @@ namespace min_path {
             ArgumentParser();
 
             /**
+             * @brief ArgumentParser - destructor
+             */
+            ~ArgumentParser() = default;
+
+            /**
+             * @brief ArgumentParser - copy constructor, is forbidden  because the signals are not copied
+             */
+            ArgumentParser(const ArgumentParser &) = delete;
+
+            /**
+             * @brief ArgumentParser - move constructor
+             */
+            ArgumentParser(ArgumentParser &&) = default;
+
+            /**
+             * @brief operator= - copy assignment operator, is forbidden  because the signals are not copied
+             */
+            ArgumentParser &operator=(const ArgumentParser &)  = delete;
+
+            /**
+             * @brief move assignment operator, is forbidden  because the boost::program_options are not assignment
+             */
+            ArgumentParser &operator=(ArgumentParser &&) = delete;
+
+            /**
              * @brief findMinPath - the program switching signal to the @mode
              * @filename - input filename
              * @inVertex - input vertex number

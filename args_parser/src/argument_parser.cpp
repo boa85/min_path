@@ -31,8 +31,8 @@ namespace min_path {
 
             findShortestPathModeDescription_.add_options()
                     ("file,f", po::value<std::string>(), "input filename, e.g. Test.tst")
-                    ("i,input", po::value<unsigned int>(), " input vertex, unsigned int")
-                    ("o,out", po::value<unsigned int>(), " output vertex, unsigned int");
+                    ("input,i", po::value<unsigned int>(), " input vertex, unsigned int")
+                    ("out,o", po::value<unsigned int>(), " output vertex, unsigned int");
 
             generateGraphModeDescription_.add_options()
                     ("file,f", po::value<std::string>(), "input filename, e.g. Test.tst")
