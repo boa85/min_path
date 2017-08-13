@@ -70,7 +70,7 @@ namespace min_path {
             return adjacencyMatrixGraphView_;
         }//buildAdjacencyMatrixGraphView
 
-        bool GraphBuilder::isValidGraph(const int vertex, const size_t edge) {
+        bool GraphBuilder::isValidGraph(const unsigned int vertex, const size_t edge) {
             return (edge >= 1) &&
                    (edge <= ((vertex * (vertex - 1)) / 2));//max edges count = n(n-1)/2, n - number of vertices
         }//isValidGraph

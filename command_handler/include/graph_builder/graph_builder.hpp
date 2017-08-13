@@ -44,14 +44,14 @@ namespace min_path {
             GraphBuilder(GraphBuilder &&) = default;
 
             /**
-             * @brief - copy assignment operator, is forbidden  because the signals are not copied
+             * @brief - copy assignment operator
              */
             GraphBuilder &operator=(const GraphBuilder &) = delete;
 
             /**
              * @brief move assignment operator
              */
-            GraphBuilder &operator=(GraphBuilder &&) = default;
+            GraphBuilder &operator=(GraphBuilder &&) = delete;
 
             /**
              * @brief  buildGraph - Returns a graph constructed from the input data read from the file
@@ -127,7 +127,7 @@ namespace min_path {
              * @param edge - number of edges
              * @return  - true, if edgesNumber(max of edges number in the graph) <= n(n - 1)/2,
              */
-            bool isValidGraph(const int vertex, const size_t edge);
+            bool isValidGraph(const unsigned int vertex, const size_t edge);
 
             /**
              * @brief EDGE_PARM_COUNT - count of edge parameters: input vertex, output vertex, cost
