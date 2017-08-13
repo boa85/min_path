@@ -31,14 +31,14 @@ namespace min_path {
 
         void FindShortestPathCommand::fordBellman(const EdgesListGraphView &graph,
                                                   const int vertexCount,
-                                                  unsigned long edgesCount) {
-            const auto INF = std::numeric_limits<int>::max();
-            std::vector<int> d(vertexCount, INF);
-            d[inVertex_] = 0;
+                                                  const size_t edgesCount) {
+            const auto INF = std::numeric_limits<int>::max();//infinity
+            std::vector<int> d(vertexCount, INF);//array of distances
+            d[inVertex_] = 0;//
             std::vector<int> p(vertexCount, -1);
             for (;;) {
                 bool any = false;
-                for (int j = 0; j < edgesCount; ++j)
+                for (size_t j = 0; j < edgesCount; ++j)
                     if (d[graph[j].inVertex] < INF) {
                         if (d[graph[j].outVertex] > d[graph[j].inVertex] + graph[j].cost) {
                             d[graph[j].outVertex] = d[graph[j].inVertex] + graph[j].cost;
@@ -83,10 +83,10 @@ namespace min_path {
         int FindShortestPathCommand::calculatePathLength(const std::vector<int> &path,
                                                          const EdgesListGraphView &graph) {
             int totalCost = 0;
-            for (int i = 0; i < path.size() - 1; ++i) {
+            for (size_t i = 0; i < path.size() - 1; ++i) {//пошли по всем вершинам полученного пути
                 auto inVertex = path[i];
                 auto outVertex = path[i + 1];
-                for (auto e : graph) {
+                for (auto e : graph) {//ищем в графе ребра с этими решниами
                     if (e.inVertex == inVertex && e.outVertex == outVertex) {
                         totalCost += e.cost;
                     }

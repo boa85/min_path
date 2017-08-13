@@ -52,49 +52,55 @@ namespace min_path {
             FindShortestPathCommand(FindShortestPathCommand &&) = default;
 
             /**
-             * @brief ShortestPathCommand - copy assignment operator, delete
+             * @brief ShortestPathCommand - copy assignment operator
              */
-            FindShortestPathCommand &operator=(const FindShortestPathCommand &) = delete;
+            FindShortestPathCommand &operator=(const FindShortestPathCommand &) = default;
 
             /**
-             *@brief  ShortestPathCommand - move assignment operator, delete
+             *@brief  ShortestPathCommand - move assignment operator
              */
-            FindShortestPathCommand &operator=(FindShortestPathCommand &&)  = delete;
+            FindShortestPathCommand &operator=(FindShortestPathCommand &&)  = default;
 
         private:
 
             /**
              * @brief filename_ - input filename
              */
-            const std::string filename_;
+            std::string filename_;
 
             /**
              * @brief inVertex_ - input (start) vertex
              */
-            const unsigned int inVertex_;
+            int inVertex_;
 
             /**
              * @brief outVertex_ - out (end) vertex
              */
-            const unsigned int outVertex_;
+            int outVertex_;
 
-        private:
             /**
              * @@brief fordBellman - the classical implementation of the Ford-Bellman algorithm
              * @param graph - a list of edges of the graph
              * @param vertexCount - number of vertices
              * @param edgesCount - number of edges
              */
-            void fordBellman(const EdgesListGraphView &graph, int vertexCount, unsigned long edgesCount);
+            void fordBellman(const EdgesListGraphView &graph, const int vertexCount, const size_t edgesCount);
 
             /**
-             * @brief isValidVertices - check the
+             * @brief isValidVertices - Checks for the presence of input and output vertices in the graph
              * @param graph
-             * @return
+             * @return - true, if input and output vertices exists
              */
             bool isValidVertices(const EdgesListGraphView &graph);
 
+            /**
+             * @brief calculatePathLength
+             * @param path - numbers of vertices in shortest path between input and output vertices
+             * @param graph - graph
+             * @return length of shortest path between input and output vertices
+             */
             int calculatePathLength(const std::vector<int> &path, const EdgesListGraphView &graph);
+
         };//class FindShortestPathCommand
 
     }//namespace command_handler
