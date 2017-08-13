@@ -51,9 +51,9 @@ namespace min_path {
             std::uniform_int_distribution<int> uid(0, 100);
             std::uniform_int_distribution<int> uid2(-100, 100);
             for (int i = 0; i < count; ++i) {
-                for (int j = i; j < count; ++j) {
+                for (int j = i + 1; j < count; ++j) {
                     auto p = uid(gen);
-                    if (p < probability && i != j) {
+                    if (p < probability) {
                         Edge edge{};
                         edge.inVertex = i + 1;
                         edge.outVertex = j + 1;
