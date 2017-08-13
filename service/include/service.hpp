@@ -10,7 +10,7 @@
 #include <boost/filesystem.hpp>
 #include <boost/signals2.hpp>
 #include <boost/program_options.hpp>
-
+#include <iostream>
 namespace min_path {
     namespace service {
         namespace bs=boost::signals2;
@@ -23,6 +23,9 @@ namespace min_path {
             int outVertex;
             int cost;
 
+            void print() {
+                std::cout << inVertex << ":" << cost << ":" << outVertex << std::endl;
+            }
             bool isValid() {
                 return inVertex > 0 && outVertex > 0;
             }
