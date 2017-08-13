@@ -21,10 +21,10 @@ namespace min_path {
                             "author: boa85\n"
                             "program options: \n "
                             "mode, filename, vertex1, vertex2 \n"
-                            "e.g ./min_path -m minpath -f Test.tst  -i 1 -o 13\n"
+                            "e.g ./min_path -m minpath -f graph.txt  -i 1 -o 13\n"
                             "Searches for the shortest distance between vertices  "
                             "\n or \n "
-                            "e.g ./min_path -m generate -f Test.tst  -c 13 -p 33\n"
+                            "e.g ./min_path -m generate -f graph.txt  -c 13 -p 33\n"
                             "generate new input file with graph description in next format: \"in:weight:out\" \n")
                     ("mode,m", po::value<std::string>(&mode_)->required(),
                      "program mode: minpath, generate");
