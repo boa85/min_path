@@ -30,12 +30,12 @@ namespace min_path {
                      "program mode: minpath, generate");
 
             findShortestPathModeDescription_.add_options()
-                    ("file,f", po::value<std::string>(), "input filename, e.g. Test.tst")
+                    ("file,f", po::value<std::string>(), "input filename, e.g. graph.txt")
                     ("input,i", po::value<unsigned int>(), " input vertex, unsigned int")
                     ("out,o", po::value<unsigned int>(), " output vertex, unsigned int");
 
             generateGraphModeDescription_.add_options()
-                    ("file,f", po::value<std::string>(), "input filename, e.g. Test.tst")
+                    ("file,f", po::value<std::string>(), "out filename, e.g. graph.txt")
                     ("number,n", po::value<unsigned int>(), "number of vertices")
                     ("probability,p", po::value<unsigned int>(),
                      "probability of appearance of an edge between vertices in percent");
