@@ -17,7 +17,7 @@ namespace min_path {
         using namespace service;
 
         /**
-         * @class GraphBuilder - read input file and build graph as list of edges
+         * @class GraphBuilder - read input file and build graph as list of edges or adjacency matrix
          */
         class GraphBuilder {
 
@@ -54,46 +54,86 @@ namespace min_path {
             GraphBuilder &operator=(GraphBuilder &&) = default;
 
             /**
-             * @brief getGraph - Returns a graph constructed from the input data read from the file
+             * @brief  buildGraph - Returns a graph constructed from the input data read from the file
+             * @param graphFormat - graph view format: list of edges, adjacency matrix
              */
-            void getGraph(const GRAPH_FORMAT &graphFormat);
+            void buildGraph(const GRAPH_FORMAT &graphFormat);
 
-            bs::signal<void(std::shared_ptr<EdgesListGraphView>, int, unsigned long)> edgesListGraph;
+            /**
+             * @return - count of vertices in the graph
+             */
+            int vertexCount() const;
 
-            bs::signal<void(std::shared_ptr<AdjacencyMatrixGraphView>)> adjacencyMatrixGraph;
+            /**
+             * @return -  count of edges in the graph
+             */
+            unsigned long edgeCount() const;
+
+            /**
+             * @return -  graph as list of edges
+             */
+            const EdgesListGraphView &getEdgesListGraphView() const;
+
+            /**
+             * @return graph as adjacency matrix
+             */
+            const AdjacencyMatrixGraphView &getAdjacencyMatrixGraphView() const;
+
+            /**
+             * @brief setFilename - setter
+             * @param filename - input filename
+             */
+            void setFilename(const std::string &filename);
         private:
 
             /**
              * @brief filename_ - input filename
              */
             std::string filename_;
+
             /**
              * @brief vertexCount_ - number of vertices in the graph
              */
             int vertexCount_;
+
             /**
              * @brief edgeCount - number of edges in the graph
              */
-            unsigned long edgeCount_;
+            size_t edgeCount_;
+
+            /**
+             * @brief edgesListGraphView_ - current graph as edges list view
+             */
+            EdgesListGraphView edgesListGraphView_;
+
+            /**
+             * @brief adjacencyMatrixGraphView_ - current graph as adjacency matrix view
+             */
+            AdjacencyMatrixGraphView adjacencyMatrixGraphView_;
 
             /**
              * @brief buildEdgesListGraphView - build a graph as list of edges  from the input data read from the file
              */
-            std::shared_ptr<EdgesListGraphView> buildEdgesListGraphView();
+            EdgesListGraphView buildEdgesListGraphView();
 
             /**
              * @brief buildAdjacencyMatrixGraphView - build a graph as adjacency matrix  from the input data read from the file
              */
-            std::shared_ptr<AdjacencyMatrixGraphView> buildAdjacencyMatrixGraphView();
+            AdjacencyMatrixGraphView &buildAdjacencyMatrixGraphView();
 
             /**
              * @brief isValidGraph
              * @param vertex - number of vertices
              * @param edge - number of edges
-             * @return  - true, if edgesNumber(max of edges number in the
-             * ) <= n(n - 1)/2,
+             * @return  - true, if edgesNumber(max of edges number in the graph) <= n(n - 1)/2,
              */
-            bool isValidGraph(int vertex, unsigned long edge);
+            bool isValidGraph(const int vertex, const size_t edge);
+
+            /**
+             * @brief EDGE_PARM_COUNT - count of edge parameters: input vertex, output vertex, cost
+             */
+            const unsigned int EDGE_PARM_COUNT = 3;
+
         };//class GraphBuilder
 
     }//namespace graph_builder

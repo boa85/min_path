@@ -11,16 +11,19 @@ namespace min_path {
         GraphBuilder::GraphBuilder(const std::string &filename)
                 : filename_(filename) {}
 
-        std::shared_ptr<EdgesListGraphView> GraphBuilder::buildEdgesListGraphView() {
-            auto graph = std::make_shared<EdgesListGraphView>();
+        EdgesListGraphView GraphBuilder::buildEdgesListGraphView() {
+            EdgesListGraphView graph;
             std::ifstream input(filename_);
+            if (!input.is_open()) {
+                throw std::runtime_error(("cannot open file ") + filename_);
+            }
             std::string line;
             int tmp1 = 0;
             int tmp2 = 0;
             while (getline(input, line)) {//read next line
                 std::vector<std::string> array;
-                boost::algorithm::split(array, line, boost::is_any_of(":"));
-                if (array.size() != 3) {
+                boost::algorithm::split(array, line, boost::is_any_of(":"));//split input data
+                if (array.size() != EDGE_PARM_COUNT) {
                     throw std::invalid_argument("invalid data format");
                 }
                 Edge edge{};
@@ -30,43 +33,68 @@ namespace min_path {
                 if (!edge.isValid()) {
                     throw std::invalid_argument("invalid value edge");
                 }
-                tmp1 = std::max(edge.inVertex, tmp1);
+                tmp1 = std::max(edge.inVertex, tmp1);//for calculation number of vertices
                 tmp2 = std::max(edge.outVertex, tmp2);
-                graph->push_back(edge);
+                graph.push_back(edge);
             }
 
-            edgeCount_ = graph->size();
-            vertexCount_ = std::max(tmp1, tmp2);
+            edgeCount_ = graph.size();
+            vertexCount_ = std::max(tmp1, tmp2);//определяем количество вершин
             input.close();
             if (!isValidGraph(vertexCount_, edgeCount_)) {
-                throw std::logic_error("");
+                throw std::logic_error("invalid edges count,"
+                                               "max edges count = n(n-1)/2, n - number of vertices");
             }
             return graph;
-
         }//buildEdgesListGraphView
 
-        void GraphBuilder::getGraph(const GRAPH_FORMAT &graphFormat) {
+        void GraphBuilder::buildGraph(const GRAPH_FORMAT &graphFormat) {
             switch (graphFormat) {
                 case GRAPH_FORMAT::EDGE_LIST: {
-                    auto graph = buildEdgesListGraphView();
-                    edgesListGraph(graph, vertexCount_, edgeCount_);
+                    edgesListGraphView_ = buildEdgesListGraphView();
                     break;
                 }
                 case GRAPH_FORMAT::ADJACENCY_MATRIX: {
-                    auto graph = buildAdjacencyMatrixGraphView();
-                    adjacencyMatrixGraph(graph);
+                    adjacencyMatrixGraphView_ = buildAdjacencyMatrixGraphView();
                     break;
                 }
             }
-        }//getGraph
+        }//buildGraph
 
-        std::shared_ptr<AdjacencyMatrixGraphView> GraphBuilder::buildAdjacencyMatrixGraphView() {
-            return std::make_shared<AdjacencyMatrixGraphView>();
-        }
+        AdjacencyMatrixGraphView &GraphBuilder::buildAdjacencyMatrixGraphView() {
+            adjacencyMatrixGraphView_.reserve(100);
+            for (auto v:adjacencyMatrixGraphView_) {
+                v.reserve(100);
+                v = {-1};
+            }
+            return adjacencyMatrixGraphView_;
+        }//buildAdjacencyMatrixGraphView
 
-        bool GraphBuilder::isValidGraph(int vertex, unsigned long edge) {
-            return (edge <= ((vertex * (vertex - 1)) / 2));//max edges count = n(n-1)/2, n - number of vertex
-        }
+        bool GraphBuilder::isValidGraph(const int vertex, const size_t edge) {
+            return (edge >= 1) &&
+                   (edge <= ((vertex * (vertex - 1)) / 2));//max edges count = n(n-1)/2, n - number of vertices
+        }//isValidGraph
+
+        int GraphBuilder::vertexCount() const {
+            return vertexCount_;
+        }//vertexCount
+
+        unsigned long GraphBuilder::edgeCount() const {
+            return edgeCount_;
+        }//edgeCount
+
+        const EdgesListGraphView &GraphBuilder::getEdgesListGraphView() const {
+            return edgesListGraphView_;
+        }//getEdgesListGraphView
+
+        const AdjacencyMatrixGraphView &GraphBuilder::getAdjacencyMatrixGraphView() const {
+            return adjacencyMatrixGraphView_;
+        }//getEdgesListGraphView
+
+        void GraphBuilder::setFilename(const std::string &filename) {
+            filename_ = filename;
+        }//setFilename
+
 
     }//namespace graph_builder
 
