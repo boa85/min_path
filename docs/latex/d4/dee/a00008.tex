@@ -1,0 +1,150 @@
+\hypertarget{a00008}{}\section{min\+\_\+path\+:\+:command\+\_\+handler\+:\+:I\+Command Class Reference}
+\label{a00008}\index{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}}
+
+
+{\ttfamily \#include $<$icommand.\+hpp$>$}
+
+
+
+Inheritance diagram for min\+\_\+path\+:\+:command\+\_\+handler\+:\+:I\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/da4/a00078}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for min\+\_\+path\+:\+:command\+\_\+handler\+:\+:I\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{d1/d51/a00079}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00008_a2014cfaa28b505c08be8e84b2e1f0b3b_a2014cfaa28b505c08be8e84b2e1f0b3b}{I\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00008}{I\+Command} -\/ default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{a00008_aae5aae528abd454f6635eace2e8ad52c_aae5aae528abd454f6635eace2e8ad52c}{$\sim$\+I\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em $\sim$\+I\+Command -\/ destructor \end{DoxyCompactList}\item 
+\hyperlink{a00008_a96aa0372a4e822c147b790fe3edd0873_a96aa0372a4e822c147b790fe3edd0873}{I\+Command} (const \hyperlink{a00008}{I\+Command} \&)=default
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item copy constructor 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\hyperlink{a00008_a038646163a965cbb7381d5d187ea72ee_a038646163a965cbb7381d5d187ea72ee}{I\+Command} (\hyperlink{a00008}{I\+Command} \&\&)=default
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item move constructor 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\hyperlink{a00008}{I\+Command} \& \hyperlink{a00008_ac3fddc72743ad81ba928732aa768949f_ac3fddc72743ad81ba928732aa768949f}{operator=} (const \hyperlink{a00008}{I\+Command} \&)=default
+\begin{DoxyCompactList}\small\item\em operator= copy assignment operator \end{DoxyCompactList}\item 
+\hyperlink{a00008}{I\+Command} \& \hyperlink{a00008_a08bddab061856ba23b4f8518816cb416_a08bddab061856ba23b4f8518816cb416}{operator=} (\hyperlink{a00008}{I\+Command} \&\&)=default
+\begin{DoxyCompactList}\small\item\em operator= move assignment operator \end{DoxyCompactList}\item 
+virtual void \hyperlink{a00008_ab821adbdef63ad2d9b33a222c2a98cc0_ab821adbdef63ad2d9b33a222c2a98cc0}{execute} ()=0
+\begin{DoxyCompactList}\small\item\em execute -\/ pure virtual method, override in derived classes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Command interface 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}!I\+Command@{I\+Command}}
+\index{I\+Command@{I\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}}
+\subsubsection[{\texorpdfstring{I\+Command()=default}{ICommand()=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command\+::\+I\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00008_a2014cfaa28b505c08be8e84b2e1f0b3b_a2014cfaa28b505c08be8e84b2e1f0b3b}{}\label{a00008_a2014cfaa28b505c08be8e84b2e1f0b3b_a2014cfaa28b505c08be8e84b2e1f0b3b}
+
+
+\hyperlink{a00008}{I\+Command} -\/ default constructor. 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}!````~I\+Command@{$\sim$\+I\+Command}}
+\index{````~I\+Command@{$\sim$\+I\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}}
+\subsubsection[{\texorpdfstring{$\sim$\+I\+Command()=default}{~ICommand()=default}}]{\setlength{\rightskip}{0pt plus 5cm}virtual min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command\+::$\sim$\+I\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}\hypertarget{a00008_aae5aae528abd454f6635eace2e8ad52c_aae5aae528abd454f6635eace2e8ad52c}{}\label{a00008_aae5aae528abd454f6635eace2e8ad52c_aae5aae528abd454f6635eace2e8ad52c}
+
+
+$\sim$\+I\+Command -\/ destructor 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}!I\+Command@{I\+Command}}
+\index{I\+Command@{I\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}}
+\subsubsection[{\texorpdfstring{I\+Command(const I\+Command \&)=default}{ICommand(const ICommand &)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command\+::\+I\+Command (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Command} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00008_a96aa0372a4e822c147b790fe3edd0873_a96aa0372a4e822c147b790fe3edd0873}{}\label{a00008_a96aa0372a4e822c147b790fe3edd0873_a96aa0372a4e822c147b790fe3edd0873}
+
+
+
+\begin{DoxyItemize}
+\item copy constructor 
+\end{DoxyItemize}
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}!I\+Command@{I\+Command}}
+\index{I\+Command@{I\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}}
+\subsubsection[{\texorpdfstring{I\+Command(\+I\+Command \&\&)=default}{ICommand(ICommand &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command\+::\+I\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Command} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00008_a038646163a965cbb7381d5d187ea72ee_a038646163a965cbb7381d5d187ea72ee}{}\label{a00008_a038646163a965cbb7381d5d187ea72ee_a038646163a965cbb7381d5d187ea72ee}
+
+
+
+\begin{DoxyItemize}
+\item move constructor 
+\end{DoxyItemize}
+
+
+
+\subsection{Member Function Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}!execute@{execute}}
+\index{execute@{execute}!min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}}
+\subsubsection[{\texorpdfstring{execute()=0}{execute()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{a00008_ab821adbdef63ad2d9b33a222c2a98cc0_ab821adbdef63ad2d9b33a222c2a98cc0}{}\label{a00008_ab821adbdef63ad2d9b33a222c2a98cc0_ab821adbdef63ad2d9b33a222c2a98cc0}
+
+
+execute -\/ pure virtual method, override in derived classes 
+
+
+
+Implemented in \hyperlink{a00005_a517885dc57466a93a07d04ddfb68852d_a517885dc57466a93a07d04ddfb68852d}{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}, and \hyperlink{a00006_ab12982f085f5974e6922aca8959400af_ab12982f085f5974e6922aca8959400af}{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}.
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}}
+\subsubsection[{\texorpdfstring{operator=(const I\+Command \&)=default}{operator=(const ICommand &)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Command}\& min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Command} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00008_ac3fddc72743ad81ba928732aa768949f_ac3fddc72743ad81ba928732aa768949f}{}\label{a00008_ac3fddc72743ad81ba928732aa768949f_ac3fddc72743ad81ba928732aa768949f}
+
+
+operator= copy assignment operator 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}}
+\subsubsection[{\texorpdfstring{operator=(\+I\+Command \&\&)=default}{operator=(ICommand &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Command}\& min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Command} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00008_a08bddab061856ba23b4f8518816cb416_a08bddab061856ba23b4f8518816cb416}{}\label{a00008_a08bddab061856ba23b4f8518816cb416_a08bddab061856ba23b4f8518816cb416}
+
+
+operator= move assignment operator 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/include/\hyperlink{a00021}{icommand.\+hpp}\end{DoxyCompactItemize}

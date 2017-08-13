@@ -1,0 +1,229 @@
+\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder}{}\section{min\+\_\+path\+:\+:graph\+\_\+builder\+:\+:Graph\+Builder Class Reference}
+\label{classmin__path_1_1graph__builder_1_1_graph_builder}\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+
+
+{\ttfamily \#include $<$graph\+\_\+builder.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_af8e42b34ae946ec91a86daea07379bb4}{Graph\+Builder} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} -\/ constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_a63770862e662bfa85ca917f2aa2085f7}{$\sim$\+Graph\+Builder} ()=default
+\begin{DoxyCompactList}\small\item\em $\sim$\+Graph\+Builder -\/ destructor \end{DoxyCompactList}\item 
+\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_a616bc8b7bcebcd695066b1c77bff0d58}{Graph\+Builder} (const \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} \&)=delete
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} -\/ copy constructor, is forbidden because the signals are not copied. \end{DoxyCompactList}\item 
+\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_a63a7bf449c4341c57ac11292683fe4b5}{Graph\+Builder} (\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} \&\&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} -\/ move constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} \& \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_ad25912e3925a0b5d272e439c133dbaed}{operator=} (const \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} \&)=delete
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item copy assignment operator, is forbidden because the signals are not copied 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} \& \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_a956ae5330a7549448b3a65d18ef3256f}{operator=} (\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} \&\&)=default
+\begin{DoxyCompactList}\small\item\em move assignment operator \end{DoxyCompactList}\item 
+void \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_af93f9ccc6ee766b6e9103b0410118251}{build\+Graph} (const \hyperlink{namespacemin__path_1_1service_a1f61bb8d119aded91f38ff564193177c}{G\+R\+A\+P\+H\+\_\+\+F\+O\+R\+M\+AT} \&graph\+Format)
+\begin{DoxyCompactList}\small\item\em build\+Graph -\/ Returns a graph constructed from the input data read from the file \end{DoxyCompactList}\item 
+int \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_a1f87c00f0c33d05c43c303d944e98e20}{vertex\+Count} () const 
+\item 
+unsigned long \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_ab11f2d747657833d8858412550213206}{edge\+Count} () const 
+\item 
+const \hyperlink{namespacemin__path_1_1service_aa7134896d837083f384364b56a32bb49}{Edges\+List\+Graph\+View} \& \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_a92a552ca053196f8f86f6449f47ed795}{get\+Edges\+List\+Graph\+View} () const 
+\item 
+const \hyperlink{namespacemin__path_1_1service_af657481a4b0a05546de6e9c1023bd9f5}{Adjacency\+Matrix\+Graph\+View} \& \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_a54d8756fc2746a29b5cdb99a731ee9fb}{get\+Adjacency\+Matrix\+Graph\+View} () const 
+\item 
+void \hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder_ae1e8d98a704fa5a7a5ad316259d95d6b}{set\+Filename} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em set\+Filename -\/ setter \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+input file and build graph as list of edges or adjacency matrix 
+
+Definition at line 22 of file graph\+\_\+builder.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!Graph\+Builder@{Graph\+Builder}}
+\index{Graph\+Builder@{Graph\+Builder}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{Graph\+Builder(const std\+::string \&filename)}{GraphBuilder(const std::string &filename)}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::\+Graph\+Builder (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_af8e42b34ae946ec91a86daea07379bb4}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_af8e42b34ae946ec91a86daea07379bb4}
+
+
+\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} -\/ constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & input filename \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file graph\+\_\+builder.\+cpp.
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!````~Graph\+Builder@{$\sim$\+Graph\+Builder}}
+\index{````~Graph\+Builder@{$\sim$\+Graph\+Builder}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{$\sim$\+Graph\+Builder()=default}{~GraphBuilder()=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::$\sim$\+Graph\+Builder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_a63770862e662bfa85ca917f2aa2085f7}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_a63770862e662bfa85ca917f2aa2085f7}
+
+
+$\sim$\+Graph\+Builder -\/ destructor 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!Graph\+Builder@{Graph\+Builder}}
+\index{Graph\+Builder@{Graph\+Builder}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{Graph\+Builder(const Graph\+Builder \&)=delete}{GraphBuilder(const GraphBuilder &)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::\+Graph\+Builder (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graph\+Builder} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_a616bc8b7bcebcd695066b1c77bff0d58}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_a616bc8b7bcebcd695066b1c77bff0d58}
+
+
+\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} -\/ copy constructor, is forbidden because the signals are not copied. 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!Graph\+Builder@{Graph\+Builder}}
+\index{Graph\+Builder@{Graph\+Builder}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{Graph\+Builder(\+Graph\+Builder \&\&)=default}{GraphBuilder(GraphBuilder &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::\+Graph\+Builder (
+\begin{DoxyParamCaption}
+\item[{{\bf Graph\+Builder} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_a63a7bf449c4341c57ac11292683fe4b5}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_a63a7bf449c4341c57ac11292683fe4b5}
+
+
+\hyperlink{classmin__path_1_1graph__builder_1_1_graph_builder}{Graph\+Builder} -\/ move constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!build\+Graph@{build\+Graph}}
+\index{build\+Graph@{build\+Graph}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{build\+Graph(const G\+R\+A\+P\+H\+\_\+\+F\+O\+R\+M\+A\+T \&graph\+Format)}{buildGraph(const GRAPH_FORMAT &graphFormat)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::build\+Graph (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+R\+A\+P\+H\+\_\+\+F\+O\+R\+M\+AT} \&}]{graph\+Format}
+\end{DoxyParamCaption}
+)}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_af93f9ccc6ee766b6e9103b0410118251}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_af93f9ccc6ee766b6e9103b0410118251}
+
+
+build\+Graph -\/ Returns a graph constructed from the input data read from the file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+Format} & -\/ graph view format\+: list of edges, adjacency matrix \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file graph\+\_\+builder.\+cpp.
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!edge\+Count@{edge\+Count}}
+\index{edge\+Count@{edge\+Count}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{edge\+Count() const }{edgeCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::edge\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_ab11f2d747657833d8858412550213206}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_ab11f2d747657833d8858412550213206}
+\begin{DoxyReturn}{Returns}
+-\/ count of edges in the graph 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file graph\+\_\+builder.\+cpp.
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!get\+Adjacency\+Matrix\+Graph\+View@{get\+Adjacency\+Matrix\+Graph\+View}}
+\index{get\+Adjacency\+Matrix\+Graph\+View@{get\+Adjacency\+Matrix\+Graph\+View}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{get\+Adjacency\+Matrix\+Graph\+View() const }{getAdjacencyMatrixGraphView() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Adjacency\+Matrix\+Graph\+View} \& min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::get\+Adjacency\+Matrix\+Graph\+View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_a54d8756fc2746a29b5cdb99a731ee9fb}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_a54d8756fc2746a29b5cdb99a731ee9fb}
+\begin{DoxyReturn}{Returns}
+graph as adjacency matrix 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file graph\+\_\+builder.\+cpp.
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!get\+Edges\+List\+Graph\+View@{get\+Edges\+List\+Graph\+View}}
+\index{get\+Edges\+List\+Graph\+View@{get\+Edges\+List\+Graph\+View}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{get\+Edges\+List\+Graph\+View() const }{getEdgesListGraphView() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Edges\+List\+Graph\+View} \& min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::get\+Edges\+List\+Graph\+View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_a92a552ca053196f8f86f6449f47ed795}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_a92a552ca053196f8f86f6449f47ed795}
+\begin{DoxyReturn}{Returns}
+-\/ graph as list of edges 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file graph\+\_\+builder.\+cpp.
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{operator=(const Graph\+Builder \&)=delete}{operator=(const GraphBuilder &)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph\+Builder}\& min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graph\+Builder} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_ad25912e3925a0b5d272e439c133dbaed}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_ad25912e3925a0b5d272e439c133dbaed}
+
+
+
+\begin{DoxyItemize}
+\item copy assignment operator, is forbidden because the signals are not copied 
+\end{DoxyItemize}
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{operator=(\+Graph\+Builder \&\&)=default}{operator=(GraphBuilder &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph\+Builder}\& min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Graph\+Builder} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_a956ae5330a7549448b3a65d18ef3256f}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_a956ae5330a7549448b3a65d18ef3256f}
+
+
+move assignment operator 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!set\+Filename@{set\+Filename}}
+\index{set\+Filename@{set\+Filename}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{set\+Filename(const std\+::string \&filename)}{setFilename(const std::string &filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::set\+Filename (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_ae1e8d98a704fa5a7a5ad316259d95d6b}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_ae1e8d98a704fa5a7a5ad316259d95d6b}
+
+
+set\+Filename -\/ setter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input filename \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file graph\+\_\+builder.\+cpp.
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!vertex\+Count@{vertex\+Count}}
+\index{vertex\+Count@{vertex\+Count}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{vertex\+Count() const }{vertexCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::vertex\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmin__path_1_1graph__builder_1_1_graph_builder_a1f87c00f0c33d05c43c303d944e98e20}{}\label{classmin__path_1_1graph__builder_1_1_graph_builder_a1f87c00f0c33d05c43c303d944e98e20}
+\begin{DoxyReturn}{Returns}
+-\/ count of vertices in the graph 
+\end{DoxyReturn}
+
+
+Definition at line 78 of file graph\+\_\+builder.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/include/graph\+\_\+builder/\hyperlink{graph__builder_8hpp}{graph\+\_\+builder.\+hpp}\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/src/graph\+\_\+builder/\hyperlink{graph__builder_8cpp}{graph\+\_\+builder.\+cpp}\end{DoxyCompactItemize}

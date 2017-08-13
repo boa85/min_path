@@ -1,0 +1,342 @@
+\hypertarget{a00005}{}\section{min\+\_\+path\+:\+:command\+\_\+handler\+:\+:Find\+Shortest\+Path\+Command Class Reference}
+\label{a00005}\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+
+
+{\ttfamily \#include $<$shortest\+\_\+path\+\_\+command.\+hpp$>$}
+
+
+
+Inheritance diagram for min\+\_\+path\+:\+:command\+\_\+handler\+:\+:Find\+Shortest\+Path\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{d6/d2c/a00072}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for min\+\_\+path\+:\+:command\+\_\+handler\+:\+:Find\+Shortest\+Path\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{d1/d6e/a00073}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00005_a50a520c9a9fd4b962757be360b5e344f_a50a520c9a9fd4b962757be360b5e344f}{Find\+Shortest\+Path\+Command} (const std\+::string \&filename, unsigned int in\+Vertex, unsigned int out\+Vertex)
+\begin{DoxyCompactList}\small\item\em Shortest\+Path\+Command -\/ constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00005_a69d019f4373486c4bf105dedc534271a_a69d019f4373486c4bf105dedc534271a}{$\sim$\+Find\+Shortest\+Path\+Command} () override=default
+\begin{DoxyCompactList}\small\item\em $\sim$\+Shortest\+Path\+Command -\/ destructor \end{DoxyCompactList}\item 
+void \hyperlink{a00005_a517885dc57466a93a07d04ddfb68852d_a517885dc57466a93a07d04ddfb68852d}{execute} () override
+\begin{DoxyCompactList}\small\item\em execute -\/ find shortest path between in\+Vertex and out\+Vertex and print it \end{DoxyCompactList}\item 
+\hyperlink{a00005_a32c4bc563cd2109125f3b3a1ba291409_a32c4bc563cd2109125f3b3a1ba291409}{Find\+Shortest\+Path\+Command} (const \hyperlink{a00005}{Find\+Shortest\+Path\+Command} \&)=default
+\begin{DoxyCompactList}\small\item\em Shortest\+Path\+Command -\/ copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00005_ab2a6cd9a8f8192c12d0bd3d3579a51dc_ab2a6cd9a8f8192c12d0bd3d3579a51dc}{Find\+Shortest\+Path\+Command} (\hyperlink{a00005}{Find\+Shortest\+Path\+Command} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Shortest\+Path\+Command -\/ move constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00005}{Find\+Shortest\+Path\+Command} \& \hyperlink{a00005_a423cdd822936aa6d72754e83990950a5_a423cdd822936aa6d72754e83990950a5}{operator=} (const \hyperlink{a00005}{Find\+Shortest\+Path\+Command} \&)=default
+\begin{DoxyCompactList}\small\item\em Shortest\+Path\+Command -\/ copy assignment operator. \end{DoxyCompactList}\item 
+\hyperlink{a00005}{Find\+Shortest\+Path\+Command} \& \hyperlink{a00005_acb8dc0308ded77e2873bb3caeb7043f2_acb8dc0308ded77e2873bb3caeb7043f2}{operator=} (\hyperlink{a00005}{Find\+Shortest\+Path\+Command} \&\&)=default
+\begin{DoxyCompactList}\small\item\em Shortest\+Path\+Command -\/ move assignment operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{a00005_aaa85abbc782e92802f88fe94e8b39623_aaa85abbc782e92802f88fe94e8b39623}{ford\+Bellman} (const \hyperlink{a00037_aa7134896d837083f384364b56a32bb49_aa7134896d837083f384364b56a32bb49}{Edges\+List\+Graph\+View} \&graph, const int vertex\+Count, const size\+\_\+t edges\+Count)
+\item 
+bool \hyperlink{a00005_a7e7ff6cdcf150a9f4d90f44380109099_a7e7ff6cdcf150a9f4d90f44380109099}{is\+Valid\+Vertices} (const \hyperlink{a00037_aa7134896d837083f384364b56a32bb49_aa7134896d837083f384364b56a32bb49}{Edges\+List\+Graph\+View} \&graph)
+\begin{DoxyCompactList}\small\item\em is\+Valid\+Vertices -\/ Checks for the presence of input and output vertices in the graph \end{DoxyCompactList}\item 
+int \hyperlink{a00005_a01eddf0413a37843ec50f9c6da29435e_a01eddf0413a37843ec50f9c6da29435e}{calculate\+Path\+Length} (const std\+::vector$<$ int $>$ \&path, const \hyperlink{a00037_aa7134896d837083f384364b56a32bb49_aa7134896d837083f384364b56a32bb49}{Edges\+List\+Graph\+View} \&graph)
+\begin{DoxyCompactList}\small\item\em calculate\+Path\+Length \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{a00005_ab906462d177f146fcd35aa0011868eda_ab906462d177f146fcd35aa0011868eda}{filename\+\_\+}
+\begin{DoxyCompactList}\small\item\em filename\+\_\+ -\/ input filename \end{DoxyCompactList}\item 
+int \hyperlink{a00005_ae0824ff65f78a73500e1bd4cb6521629_ae0824ff65f78a73500e1bd4cb6521629}{in\+Vertex\+\_\+}
+\begin{DoxyCompactList}\small\item\em in\+Vertex\+\_\+ -\/ input (start) vertex \end{DoxyCompactList}\item 
+int \hyperlink{a00005_aa46cc8f01d18634a14d309e88942afa8_aa46cc8f01d18634a14d309e88942afa8}{out\+Vertex\+\_\+}
+\begin{DoxyCompactList}\small\item\em out\+Vertex\+\_\+ -\/ out (end) vertex \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!Find\+Shortest\+Path\+Command@{Find\+Shortest\+Path\+Command}}
+\index{Find\+Shortest\+Path\+Command@{Find\+Shortest\+Path\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{Find\+Shortest\+Path\+Command(const std\+::string \&filename, unsigned int in\+Vertex, unsigned int out\+Vertex)}{FindShortestPathCommand(const std::string &filename, unsigned int inVertex, unsigned int outVertex)}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::\+Find\+Shortest\+Path\+Command (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename, }
+\item[{unsigned int}]{in\+Vertex, }
+\item[{unsigned int}]{out\+Vertex}
+\end{DoxyParamCaption}
+)}\hypertarget{a00005_a50a520c9a9fd4b962757be360b5e344f_a50a520c9a9fd4b962757be360b5e344f}{}\label{a00005_a50a520c9a9fd4b962757be360b5e344f_a50a520c9a9fd4b962757be360b5e344f}
+
+
+Shortest\+Path\+Command -\/ constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input filename \\
+\hline
+{\em in\+Vertex} & -\/ input (start) vertex \\
+\hline
+{\em out\+Vertex} & -\/ output (end) vertex \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+16                 : \hyperlink{a00005_ab906462d177f146fcd35aa0011868eda_ab906462d177f146fcd35aa0011868eda}{filename\_}(filename),
+17                   \hyperlink{a00005_ae0824ff65f78a73500e1bd4cb6521629_ae0824ff65f78a73500e1bd4cb6521629}{inVertex\_}(inVertex),
+18                   \hyperlink{a00005_aa46cc8f01d18634a14d309e88942afa8_aa46cc8f01d18634a14d309e88942afa8}{outVertex\_}(outVertex) \{\}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!````~Find\+Shortest\+Path\+Command@{$\sim$\+Find\+Shortest\+Path\+Command}}
+\index{````~Find\+Shortest\+Path\+Command@{$\sim$\+Find\+Shortest\+Path\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{$\sim$\+Find\+Shortest\+Path\+Command() override=default}{~FindShortestPathCommand() override=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::$\sim$\+Find\+Shortest\+Path\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}\hypertarget{a00005_a69d019f4373486c4bf105dedc534271a_a69d019f4373486c4bf105dedc534271a}{}\label{a00005_a69d019f4373486c4bf105dedc534271a_a69d019f4373486c4bf105dedc534271a}
+
+
+$\sim$\+Shortest\+Path\+Command -\/ destructor 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!Find\+Shortest\+Path\+Command@{Find\+Shortest\+Path\+Command}}
+\index{Find\+Shortest\+Path\+Command@{Find\+Shortest\+Path\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{Find\+Shortest\+Path\+Command(const Find\+Shortest\+Path\+Command \&)=default}{FindShortestPathCommand(const FindShortestPathCommand &)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::\+Find\+Shortest\+Path\+Command (
+\begin{DoxyParamCaption}
+\item[{const {\bf Find\+Shortest\+Path\+Command} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00005_a32c4bc563cd2109125f3b3a1ba291409_a32c4bc563cd2109125f3b3a1ba291409}{}\label{a00005_a32c4bc563cd2109125f3b3a1ba291409_a32c4bc563cd2109125f3b3a1ba291409}
+
+
+Shortest\+Path\+Command -\/ copy constructor. 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!Find\+Shortest\+Path\+Command@{Find\+Shortest\+Path\+Command}}
+\index{Find\+Shortest\+Path\+Command@{Find\+Shortest\+Path\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{Find\+Shortest\+Path\+Command(\+Find\+Shortest\+Path\+Command \&\&)=default}{FindShortestPathCommand(FindShortestPathCommand &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::\+Find\+Shortest\+Path\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf Find\+Shortest\+Path\+Command} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00005_ab2a6cd9a8f8192c12d0bd3d3579a51dc_ab2a6cd9a8f8192c12d0bd3d3579a51dc}{}\label{a00005_ab2a6cd9a8f8192c12d0bd3d3579a51dc_ab2a6cd9a8f8192c12d0bd3d3579a51dc}
+
+
+Shortest\+Path\+Command -\/ move constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!calculate\+Path\+Length@{calculate\+Path\+Length}}
+\index{calculate\+Path\+Length@{calculate\+Path\+Length}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{calculate\+Path\+Length(const std\+::vector$<$ int $>$ \&path, const Edges\+List\+Graph\+View \&graph)}{calculatePathLength(const std::vector< int > &path, const EdgesListGraphView &graph)}}]{\setlength{\rightskip}{0pt plus 5cm}int min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::calculate\+Path\+Length (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{path, }
+\item[{const {\bf Edges\+List\+Graph\+View} \&}]{graph}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00005_a01eddf0413a37843ec50f9c6da29435e_a01eddf0413a37843ec50f9c6da29435e}{}\label{a00005_a01eddf0413a37843ec50f9c6da29435e_a01eddf0413a37843ec50f9c6da29435e}
+
+
+calculate\+Path\+Length 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ numbers of vertices in shortest path between input and output vertices \\
+\hline
+{\em graph} & -\/ graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+length of shortest path between input and output vertices 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+84                                                                                           \{
+85             \textcolor{keywordtype}{int} totalCost = 0;
+86             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < path.size() - 1; ++i) \{\textcolor{comment}{//пошли по всем вершинам полученного пути}
+87                 \textcolor{keyword}{auto} inVertex = path[i];
+88                 \textcolor{keyword}{auto} outVertex = path[i + 1];
+89                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} e : graph) \{\textcolor{comment}{//ищем в графе ребра с этими решниами}
+90                     \textcolor{keywordflow}{if} (e.inVertex == inVertex && e.outVertex == outVertex) \{
+91                         totalCost += e.cost;
+92                     \}
+93                 \}
+94             \}
+95             \textcolor{keywordflow}{return} totalCost;
+96         \}\textcolor{comment}{//calculatePathLength}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!execute@{execute}}
+\index{execute@{execute}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{execute() override}{execute() override}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{a00005_a517885dc57466a93a07d04ddfb68852d_a517885dc57466a93a07d04ddfb68852d}{}\label{a00005_a517885dc57466a93a07d04ddfb68852d_a517885dc57466a93a07d04ddfb68852d}
+
+
+execute -\/ find shortest path between in\+Vertex and out\+Vertex and print it 
+
+
+
+Implements \hyperlink{a00008_ab821adbdef63ad2d9b33a222c2a98cc0_ab821adbdef63ad2d9b33a222c2a98cc0}{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}.
+
+
+\begin{DoxyCode}
+20                                               \{
+21             \textcolor{keyword}{auto} graphBuilder = std::make\_shared<GraphBuilder>(\hyperlink{a00005_ab906462d177f146fcd35aa0011868eda_ab906462d177f146fcd35aa0011868eda}{filename\_});
+22             graphBuilder->buildGraph(GRAPH\_FORMAT::EDGE\_LIST);
+23             \textcolor{keyword}{auto} vertexCount = graphBuilder->vertexCount();
+24             \textcolor{keyword}{auto} edgesCount = graphBuilder->edgeCount();
+25             \textcolor{keyword}{auto} graph = graphBuilder->getEdgesListGraphView();
+26             \textcolor{keywordflow}{if} (!\hyperlink{a00005_a7e7ff6cdcf150a9f4d90f44380109099_a7e7ff6cdcf150a9f4d90f44380109099}{isValidVertices}(graph)) \{
+27                 \textcolor{keywordflow}{throw} std::logic\_error(\textcolor{stringliteral}{"The input or output vertices are not set correctly"});
+28             \}
+29             \hyperlink{a00005_aaa85abbc782e92802f88fe94e8b39623_aaa85abbc782e92802f88fe94e8b39623}{fordBellman}(graph, vertexCount, edgesCount);
+30         \}\textcolor{comment}{//execute}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!ford\+Bellman@{ford\+Bellman}}
+\index{ford\+Bellman@{ford\+Bellman}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{ford\+Bellman(const Edges\+List\+Graph\+View \&graph, const int vertex\+Count, const size\+\_\+t edges\+Count)}{fordBellman(const EdgesListGraphView &graph, const int vertexCount, const size_t edgesCount)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::ford\+Bellman (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edges\+List\+Graph\+View} \&}]{graph, }
+\item[{const int}]{vertex\+Count, }
+\item[{const size\+\_\+t}]{edges\+Count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00005_aaa85abbc782e92802f88fe94e8b39623_aaa85abbc782e92802f88fe94e8b39623}{}\label{a00005_aaa85abbc782e92802f88fe94e8b39623_aaa85abbc782e92802f88fe94e8b39623}
+@brief ford\+Bellman -\/ the classical implementation of the Ford-\/\+Bellman algorithm 
+\begin{DoxyParams}{Parameters}
+{\em graph} & -\/ a list of edges of the graph \\
+\hline
+{\em vertex\+Count} & -\/ number of vertices \\
+\hline
+{\em edges\+Count} & -\/ number of edges \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+34                                                                            \{
+35             \textcolor{keyword}{const} \textcolor{keyword}{auto} INF = std::numeric\_limits<int>::max();\textcolor{comment}{//infinity}
+36             std::vector<int> d(vertexCount, INF);\textcolor{comment}{//array of distances}
+37             d[\hyperlink{a00005_ae0824ff65f78a73500e1bd4cb6521629_ae0824ff65f78a73500e1bd4cb6521629}{inVertex\_}] = 0;\textcolor{comment}{//}
+38             std::vector<int> p(vertexCount, -1);
+39             \textcolor{keywordflow}{for} (;;) \{
+40                 \textcolor{keywordtype}{bool} any = \textcolor{keyword}{false};
+41                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < edgesCount; ++j)
+42                     \textcolor{keywordflow}{if} (d[graph[j].inVertex] < INF) \{
+43                         \textcolor{keywordflow}{if} (d[graph[j].outVertex] > d[graph[j].inVertex] + graph[j].cost) \{
+44                             d[graph[j].outVertex] = d[graph[j].inVertex] + graph[j].cost;
+45                             p[graph[j].outVertex] = graph[j].inVertex;
+46                             any = \textcolor{keyword}{true};
+47                         \}
+48                     \}
+49                 \textcolor{keywordflow}{if} (!any) \{
+50                     \textcolor{keywordflow}{break};
+51                 \}
+52             \}
+53 
+54             \textcolor{keywordflow}{if} (d[\hyperlink{a00005_aa46cc8f01d18634a14d309e88942afa8_aa46cc8f01d18634a14d309e88942afa8}{outVertex\_}] == INF) \{
+55                 std::cout << \textcolor{stringliteral}{"No path from "} << \hyperlink{a00005_ae0824ff65f78a73500e1bd4cb6521629_ae0824ff65f78a73500e1bd4cb6521629}{inVertex\_} << \textcolor{stringliteral}{" to "} << 
+      \hyperlink{a00005_aa46cc8f01d18634a14d309e88942afa8_aa46cc8f01d18634a14d309e88942afa8}{outVertex\_} << \textcolor{stringliteral}{"."};
+56             \} \textcolor{keywordflow}{else} \{
+57                 std::vector<int> path;
+58                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} cur = \hyperlink{a00005_aa46cc8f01d18634a14d309e88942afa8_aa46cc8f01d18634a14d309e88942afa8}{outVertex\_}; cur != -1; cur = p[cur]) \{
+59                     path.push\_back(cur);
+60                 \}
+61                 reverse(path.begin(), path.end());
+62                 std::cout << \textcolor{stringliteral}{"Path from "} << \hyperlink{a00005_ae0824ff65f78a73500e1bd4cb6521629_ae0824ff65f78a73500e1bd4cb6521629}{inVertex\_} << \textcolor{stringliteral}{" to "} << 
+      \hyperlink{a00005_aa46cc8f01d18634a14d309e88942afa8_aa46cc8f01d18634a14d309e88942afa8}{outVertex\_} << \textcolor{stringliteral}{": "};
+63                 std::cout << std::endl;
+64                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i: path) \{
+65                     std::cout << i << \textcolor{charliteral}{' '};
+66                 \}
+67                 std::cout << \textcolor{stringliteral}{"length of path = "} << \hyperlink{a00005_a01eddf0413a37843ec50f9c6da29435e_a01eddf0413a37843ec50f9c6da29435e}{calculatePathLength}(path, graph);
+68 
+69             \}
+70         \}\textcolor{comment}{//fordBellman}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!is\+Valid\+Vertices@{is\+Valid\+Vertices}}
+\index{is\+Valid\+Vertices@{is\+Valid\+Vertices}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{is\+Valid\+Vertices(const Edges\+List\+Graph\+View \&graph)}{isValidVertices(const EdgesListGraphView &graph)}}]{\setlength{\rightskip}{0pt plus 5cm}bool min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::is\+Valid\+Vertices (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edges\+List\+Graph\+View} \&}]{graph}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00005_a7e7ff6cdcf150a9f4d90f44380109099_a7e7ff6cdcf150a9f4d90f44380109099}{}\label{a00005_a7e7ff6cdcf150a9f4d90f44380109099_a7e7ff6cdcf150a9f4d90f44380109099}
+
+
+is\+Valid\+Vertices -\/ Checks for the presence of input and output vertices in the graph 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true, if input and output vertices exists 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+72                                                                                      \{
+73             \textcolor{keyword}{auto} in = std::find\_if(graph.cbegin(), graph.cend(), [\textcolor{keyword}{this}](\textcolor{keyword}{const} Edge edge) -> \textcolor{keywordtype}{bool} \{
+74                 \textcolor{keywordflow}{return} edge.inVertex == \hyperlink{a00005_ae0824ff65f78a73500e1bd4cb6521629_ae0824ff65f78a73500e1bd4cb6521629}{inVertex\_};
+75             \});
+76             \textcolor{keyword}{auto} out = std::find\_if(graph.cbegin(), graph.cend(), [\textcolor{keyword}{this}](\textcolor{keyword}{const} Edge edge) -> \textcolor{keywordtype}{bool} \{
+77                 \textcolor{keywordflow}{return} edge.outVertex == \hyperlink{a00005_aa46cc8f01d18634a14d309e88942afa8_aa46cc8f01d18634a14d309e88942afa8}{outVertex\_};
+78             \});
+79             \textcolor{keywordflow}{return} (in != graph.end() && out != graph.end());
+80 
+81         \}\textcolor{comment}{//isValidVertices}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{operator=(const Find\+Shortest\+Path\+Command \&)=default}{operator=(const FindShortestPathCommand &)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Find\+Shortest\+Path\+Command}\& min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Find\+Shortest\+Path\+Command} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00005_a423cdd822936aa6d72754e83990950a5_a423cdd822936aa6d72754e83990950a5}{}\label{a00005_a423cdd822936aa6d72754e83990950a5_a423cdd822936aa6d72754e83990950a5}
+
+
+Shortest\+Path\+Command -\/ copy assignment operator. 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{operator=(\+Find\+Shortest\+Path\+Command \&\&)=default}{operator=(FindShortestPathCommand &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Find\+Shortest\+Path\+Command}\& min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Find\+Shortest\+Path\+Command} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00005_acb8dc0308ded77e2873bb3caeb7043f2_acb8dc0308ded77e2873bb3caeb7043f2}{}\label{a00005_acb8dc0308ded77e2873bb3caeb7043f2_acb8dc0308ded77e2873bb3caeb7043f2}
+
+
+Shortest\+Path\+Command -\/ move assignment operator. 
+
+
+
+\subsection{Member Data Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!filename\+\_\+@{filename\+\_\+}}
+\index{filename\+\_\+@{filename\+\_\+}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{filename\+\_\+}{filename_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::filename\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00005_ab906462d177f146fcd35aa0011868eda_ab906462d177f146fcd35aa0011868eda}{}\label{a00005_ab906462d177f146fcd35aa0011868eda_ab906462d177f146fcd35aa0011868eda}
+
+
+filename\+\_\+ -\/ input filename 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!in\+Vertex\+\_\+@{in\+Vertex\+\_\+}}
+\index{in\+Vertex\+\_\+@{in\+Vertex\+\_\+}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{in\+Vertex\+\_\+}{inVertex_}}]{\setlength{\rightskip}{0pt plus 5cm}int min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::in\+Vertex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00005_ae0824ff65f78a73500e1bd4cb6521629_ae0824ff65f78a73500e1bd4cb6521629}{}\label{a00005_ae0824ff65f78a73500e1bd4cb6521629_ae0824ff65f78a73500e1bd4cb6521629}
+
+
+in\+Vertex\+\_\+ -\/ input (start) vertex 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}!out\+Vertex\+\_\+@{out\+Vertex\+\_\+}}
+\index{out\+Vertex\+\_\+@{out\+Vertex\+\_\+}!min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command}}
+\subsubsection[{\texorpdfstring{out\+Vertex\+\_\+}{outVertex_}}]{\setlength{\rightskip}{0pt plus 5cm}int min\+\_\+path\+::command\+\_\+handler\+::\+Find\+Shortest\+Path\+Command\+::out\+Vertex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00005_aa46cc8f01d18634a14d309e88942afa8_aa46cc8f01d18634a14d309e88942afa8}{}\label{a00005_aa46cc8f01d18634a14d309e88942afa8_aa46cc8f01d18634a14d309e88942afa8}
+
+
+out\+Vertex\+\_\+ -\/ out (end) vertex 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/include/\hyperlink{a00023}{shortest\+\_\+path\+\_\+command.\+hpp}\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/src/\hyperlink{a00028}{shortest\+\_\+path\+\_\+command.\+cpp}\end{DoxyCompactItemize}

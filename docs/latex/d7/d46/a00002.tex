@@ -1,0 +1,437 @@
+\hypertarget{a00002}{}\section{min\+\_\+path\+:\+:argument\+\_\+parser\+:\+:Argument\+Parser Class Reference}
+\label{a00002}\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+
+
+{\ttfamily \#include $<$argument\+\_\+parser.\+hpp$>$}
+
+
+
+Collaboration diagram for min\+\_\+path\+:\+:argument\+\_\+parser\+:\+:Argument\+Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{da/d24/a00068}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00002_afd444aa0096628fee7fa3cd54dd8c00e_afd444aa0096628fee7fa3cd54dd8c00e}{Argument\+Parser} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00002}{Argument\+Parser} -\/ default constructor, init general\+Description\+\_\+. \end{DoxyCompactList}\item 
+\hyperlink{a00002_a299b7d944021ccd4bb8d3f1f6edd0718_a299b7d944021ccd4bb8d3f1f6edd0718}{$\sim$\+Argument\+Parser} ()=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00002}{Argument\+Parser} -\/ destructor. \end{DoxyCompactList}\item 
+\hyperlink{a00002_a90ccb3b7ce3f2c34a0b78533a0f6c128_a90ccb3b7ce3f2c34a0b78533a0f6c128}{Argument\+Parser} (const \hyperlink{a00002}{Argument\+Parser} \&)=delete
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00002}{Argument\+Parser} -\/ copy constructor, is forbidden because the signals are not copied. \end{DoxyCompactList}\item 
+\hyperlink{a00002_a84ce25cfd160d268d2c318a3c52c08fa_a84ce25cfd160d268d2c318a3c52c08fa}{Argument\+Parser} (\hyperlink{a00002}{Argument\+Parser} \&\&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00002}{Argument\+Parser} -\/ move constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00002}{Argument\+Parser} \& \hyperlink{a00002_a5c4f3f8135e422646c435d831044528d_a5c4f3f8135e422646c435d831044528d}{operator=} (const \hyperlink{a00002}{Argument\+Parser} \&)=delete
+\begin{DoxyCompactList}\small\item\em operator= -\/ copy assignment operator, is forbidden because the signals are not copied \end{DoxyCompactList}\item 
+\hyperlink{a00002}{Argument\+Parser} \& \hyperlink{a00002_a5158bbe2aac6767154d0e25a8cb66a6a_a5158bbe2aac6767154d0e25a8cb66a6a}{operator=} (\hyperlink{a00002}{Argument\+Parser} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em move assignment operator, is forbidden because the boost\+::program\+\_\+options are not assignment \end{DoxyCompactList}\item 
+void \hyperlink{a00002_a9d84b7749b05e439efcd353dde3e0586_a9d84b7749b05e439efcd353dde3e0586}{start\+Parsing} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em start\+Parsing start command line arguments parser \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bs\+::signal$<$ void(const std\+::string \&filename, const unsigned int in\+Vertex, const unsigned int out\+Vertex)$>$ \hyperlink{a00002_a7eb42d6b80eabc27953b1e2ddb08f7f1_a7eb42d6b80eabc27953b1e2ddb08f7f1}{find\+Shortest\+Path}
+\begin{DoxyCompactList}\small\item\em find\+Min\+Path -\/ the program switching signal to the   -\/ input filename  -\/ input vertex number  -\/ output vertex number \end{DoxyCompactList}\item 
+bs\+::signal$<$ void(const std\+::string \&filename, const unsigned int vertex\+Number, const unsigned int probability)$>$ \hyperlink{a00002_a5a6e6dd3ac7502d0269b2756383f1923_a5a6e6dd3ac7502d0269b2756383f1923}{generate\+Graph}
+\item 
+const unsigned int \hyperlink{a00002_a25b69ee820b15148121a85e344f6d26a_a25b69ee820b15148121a85e344f6d26a}{M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER} = 3
+\item 
+const std\+::string \hyperlink{a00002_a552c30c543bb251f8c43b528ce8d3537_a552c30c543bb251f8c43b528ce8d3537}{S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH} = \char`\"{}minpath\char`\"{}
+\item 
+const std\+::string \hyperlink{a00002_a4b56bd44886c90debd323f54761489a6_a4b56bd44886c90debd323f54761489a6}{G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH} = \char`\"{}generate\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{a00002_a1b6572cd3eb0aa505441759700679680_a1b6572cd3eb0aa505441759700679680}{init\+Descriptions} ()
+\begin{DoxyCompactList}\small\item\em init\+Descriptions -\/ init boost program options descriptions \end{DoxyCompactList}\item 
+void \hyperlink{a00002_a6d3c420cce837286647b227f1dc3c5d9_a6d3c420cce837286647b227f1dc3c5d9}{prepare\+Find\+Minimum\+Path\+Mode} (const po\+::variables\+\_\+map \&vm)
+\begin{DoxyCompactList}\small\item\em prepare\+Word\+Count\+Mode -\/ checks the correctness of the mode parameters and sent command to run mode \end{DoxyCompactList}\item 
+void \hyperlink{a00002_af2d4ef90c6ccee55da52f5a5a1c69693_af2d4ef90c6ccee55da52f5a5a1c69693}{prepare\+Generate\+Graph\+Mode} (const po\+::variables\+\_\+map \&vm)
+\begin{DoxyCompactList}\small\item\em prepare\+Generate\+Graph\+Mode -\/ checks the correctness of the mode parameters and sent command to run mode \end{DoxyCompactList}\item 
+void \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error} (const std\+::string \&error\+Message)
+\begin{DoxyCompactList}\small\item\em error -\/ error handler method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+po\+::options\+\_\+description \hyperlink{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{general\+Description\+\_\+}
+\begin{DoxyCompactList}\small\item\em general\+Description\+\_\+ -\/ command line options description \end{DoxyCompactList}\item 
+po\+::options\+\_\+description \hyperlink{a00002_a6ed91e0b976c665765f35aa51fefba87_a6ed91e0b976c665765f35aa51fefba87}{find\+Shortest\+Path\+Mode\+Description\+\_\+}
+\begin{DoxyCompactList}\small\item\em find\+Min\+Path\+Description\+\_\+ -\/ description of the shortest path search mode \end{DoxyCompactList}\item 
+po\+::options\+\_\+description \hyperlink{a00002_aaa15954a88f93131e4c17223eafc11c5_aaa15954a88f93131e4c17223eafc11c5}{generate\+Graph\+Mode\+Description\+\_\+}
+\begin{DoxyCompactList}\small\item\em generate\+Graph\+Description\+\_\+ -\/ description of the generate graph mode \end{DoxyCompactList}\item 
+std\+::string \hyperlink{a00002_ad8127feed7d8312f07ef9a52f6e06f03_ad8127feed7d8312f07ef9a52f6e06f03}{mode\+\_\+}
+\begin{DoxyCompactList}\small\item\em mode\+\_\+ -\/ string program mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+line arguments parser, based on boost\+::program\+\_\+options 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!Argument\+Parser@{Argument\+Parser}}
+\index{Argument\+Parser@{Argument\+Parser}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{Argument\+Parser()}{ArgumentParser()}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+Argument\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{a00002_afd444aa0096628fee7fa3cd54dd8c00e_afd444aa0096628fee7fa3cd54dd8c00e}{}\label{a00002_afd444aa0096628fee7fa3cd54dd8c00e_afd444aa0096628fee7fa3cd54dd8c00e}
+
+
+\hyperlink{a00002}{Argument\+Parser} -\/ default constructor, init general\+Description\+\_\+. 
+
+
+\begin{DoxyCode}
+13                                        : \hyperlink{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{generalDescription\_}(\textcolor{stringliteral}{"program options"}) \{
+14             \hyperlink{a00002_a1b6572cd3eb0aa505441759700679680_a1b6572cd3eb0aa505441759700679680}{initDescriptions}();
+15         \}\textcolor{comment}{//ArgumentParser}
+\end{DoxyCode}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!````~Argument\+Parser@{$\sim$\+Argument\+Parser}}
+\index{````~Argument\+Parser@{$\sim$\+Argument\+Parser}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{$\sim$\+Argument\+Parser()=default}{~ArgumentParser()=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::$\sim$\+Argument\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00002_a299b7d944021ccd4bb8d3f1f6edd0718_a299b7d944021ccd4bb8d3f1f6edd0718}{}\label{a00002_a299b7d944021ccd4bb8d3f1f6edd0718_a299b7d944021ccd4bb8d3f1f6edd0718}
+
+
+\hyperlink{a00002}{Argument\+Parser} -\/ destructor. 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!Argument\+Parser@{Argument\+Parser}}
+\index{Argument\+Parser@{Argument\+Parser}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{Argument\+Parser(const Argument\+Parser \&)=delete}{ArgumentParser(const ArgumentParser &)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+Argument\+Parser (
+\begin{DoxyParamCaption}
+\item[{const {\bf Argument\+Parser} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{a00002_a90ccb3b7ce3f2c34a0b78533a0f6c128_a90ccb3b7ce3f2c34a0b78533a0f6c128}{}\label{a00002_a90ccb3b7ce3f2c34a0b78533a0f6c128_a90ccb3b7ce3f2c34a0b78533a0f6c128}
+
+
+\hyperlink{a00002}{Argument\+Parser} -\/ copy constructor, is forbidden because the signals are not copied. 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!Argument\+Parser@{Argument\+Parser}}
+\index{Argument\+Parser@{Argument\+Parser}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{Argument\+Parser(\+Argument\+Parser \&\&)=default}{ArgumentParser(ArgumentParser &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+Argument\+Parser (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument\+Parser} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00002_a84ce25cfd160d268d2c318a3c52c08fa_a84ce25cfd160d268d2c318a3c52c08fa}{}\label{a00002_a84ce25cfd160d268d2c318a3c52c08fa_a84ce25cfd160d268d2c318a3c52c08fa}
+
+
+\hyperlink{a00002}{Argument\+Parser} -\/ move constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!error@{error}}
+\index{error@{error}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{error(const std\+::string \&error\+Message)}{error(const std::string &errorMessage)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::error (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{error\+Message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{}\label{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}
+
+
+error -\/ error handler method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+Message} & -\/ message about error \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+122                                                                 \{
+123             std::cout << errorMessage << std::endl << \textcolor{stringliteral}{"See help "} << std::endl << 
+      \hyperlink{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{generalDescription\_} << std::endl;
+124             \textcolor{keywordflow}{throw} ArgsParseException(errorMessage);
+125         \}\textcolor{comment}{//error}
+\end{DoxyCode}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!init\+Descriptions@{init\+Descriptions}}
+\index{init\+Descriptions@{init\+Descriptions}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{init\+Descriptions()}{initDescriptions()}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::init\+Descriptions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00002_a1b6572cd3eb0aa505441759700679680_a1b6572cd3eb0aa505441759700679680}{}\label{a00002_a1b6572cd3eb0aa505441759700679680_a1b6572cd3eb0aa505441759700679680}
+
+
+init\+Descriptions -\/ init boost program options descriptions 
+
+
+\begin{DoxyCode}
+17                                               \{
+18 
+19             \hyperlink{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{generalDescription\_}.add\_options()
+20                     (\textcolor{stringliteral}{"help,h"}, \textcolor{stringliteral}{"\(\backslash\)nmin path v 1.0\(\backslash\)n"}
+21                             \textcolor{stringliteral}{"author: boa85\(\backslash\)n"}
+22                             \textcolor{stringliteral}{"program options: \(\backslash\)n "}
+23                             \textcolor{stringliteral}{"mode, filename, vertex1, vertex2 \(\backslash\)n"}
+24                             \textcolor{stringliteral}{"e.g ./min\_path -m minpath -f Test.tst  -i 1 -o 13\(\backslash\)n"}
+25                             \textcolor{stringliteral}{"Searches for the shortest distance between vertices  "}
+26                             \textcolor{stringliteral}{"\(\backslash\)n or \(\backslash\)n "}
+27                             \textcolor{stringliteral}{"e.g ./min\_path -m generate -f Test.tst  -c 13 -p 33\(\backslash\)n"}
+28                             \textcolor{stringliteral}{"generate new input file with graph description in next format: \(\backslash\)"in:weight:out
+      \(\backslash\)" \(\backslash\)n"})
+29                     (\textcolor{stringliteral}{"mode,m"}, po::value<std::string>(&\hyperlink{a00002_ad8127feed7d8312f07ef9a52f6e06f03_ad8127feed7d8312f07ef9a52f6e06f03}{mode\_})->required(),
+30                      \textcolor{stringliteral}{"program mode: minpath, generate"});
+31 
+32             \hyperlink{a00002_a6ed91e0b976c665765f35aa51fefba87_a6ed91e0b976c665765f35aa51fefba87}{findShortestPathModeDescription\_}.add\_options()
+33                     (\textcolor{stringliteral}{"file,f"}, po::value<std::string>(), \textcolor{stringliteral}{"input filename, e.g. Test.tst"})
+34                     (\textcolor{stringliteral}{"input,i"}, po::value<unsigned int>(), \textcolor{stringliteral}{" input vertex, unsigned int"})
+35                     (\textcolor{stringliteral}{"out,o"}, po::value<unsigned int>(), \textcolor{stringliteral}{" output vertex, unsigned int"});
+36 
+37             \hyperlink{a00002_aaa15954a88f93131e4c17223eafc11c5_aaa15954a88f93131e4c17223eafc11c5}{generateGraphModeDescription\_}.add\_options()
+38                     (\textcolor{stringliteral}{"file,f"}, po::value<std::string>(), \textcolor{stringliteral}{"input filename, e.g. Test.tst"})
+39                     (\textcolor{stringliteral}{"number,n"}, po::value<unsigned int>(), \textcolor{stringliteral}{"number of vertices"})
+40                     (\textcolor{stringliteral}{"probability,p"}, po::value<unsigned int>(),
+41                      \textcolor{stringliteral}{"probability of appearance of an edge between vertices in percent"});
+42         \}\textcolor{comment}{//initDescriptions}
+\end{DoxyCode}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{operator=(const Argument\+Parser \&)=delete}{operator=(const ArgumentParser &)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Argument\+Parser}\& min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Argument\+Parser} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{a00002_a5c4f3f8135e422646c435d831044528d_a5c4f3f8135e422646c435d831044528d}{}\label{a00002_a5c4f3f8135e422646c435d831044528d_a5c4f3f8135e422646c435d831044528d}
+
+
+operator= -\/ copy assignment operator, is forbidden because the signals are not copied 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{operator=(\+Argument\+Parser \&\&)=delete}{operator=(ArgumentParser &&)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Argument\+Parser}\& min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument\+Parser} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{a00002_a5158bbe2aac6767154d0e25a8cb66a6a_a5158bbe2aac6767154d0e25a8cb66a6a}{}\label{a00002_a5158bbe2aac6767154d0e25a8cb66a6a_a5158bbe2aac6767154d0e25a8cb66a6a}
+
+
+move assignment operator, is forbidden because the boost\+::program\+\_\+options are not assignment 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!prepare\+Find\+Minimum\+Path\+Mode@{prepare\+Find\+Minimum\+Path\+Mode}}
+\index{prepare\+Find\+Minimum\+Path\+Mode@{prepare\+Find\+Minimum\+Path\+Mode}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{prepare\+Find\+Minimum\+Path\+Mode(const po\+::variables\+\_\+map \&vm)}{prepareFindMinimumPathMode(const po::variables_map &vm)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::prepare\+Find\+Minimum\+Path\+Mode (
+\begin{DoxyParamCaption}
+\item[{const po\+::variables\+\_\+map \&}]{vm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00002_a6d3c420cce837286647b227f1dc3c5d9_a6d3c420cce837286647b227f1dc3c5d9}{}\label{a00002_a6d3c420cce837286647b227f1dc3c5d9_a6d3c420cce837286647b227f1dc3c5d9}
+
+
+prepare\+Word\+Count\+Mode -\/ checks the correctness of the mode parameters and sent command to run mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vm} & -\/ boost\+::program\+\_\+options variable map with program arguments \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+44                                                                                  \{
+45             std::string filename;\textcolor{comment}{//filename}
+46             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} input = 0;\textcolor{comment}{//input vertex}
+47             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} out = 0;\textcolor{comment}{//output vertex}
+48             \textcolor{keyword}{const} \textcolor{keyword}{auto} fKey = \textcolor{stringliteral}{"file"};\textcolor{comment}{//TODO тута, по-хорошему, нужно завести мапу для режимов,}
+49             \textcolor{comment}{// с именем режима в качестве ключа и  некой структурой,}
+50             \textcolor{comment}{// содержащей описание (po::options\_description)}
+51             \textcolor{comment}{// и обработчик параметров режима, в качестве значения.}
+52             \textcolor{comment}{// Это позволит легко расширять количество режимов, простым добавлением конфигурации.}
+53             \textcolor{keyword}{const} \textcolor{keyword}{auto} iKey = \textcolor{stringliteral}{"input"};
+54             \textcolor{keyword}{const} \textcolor{keyword}{auto} oKey = \textcolor{stringliteral}{"out"};
+55             \textcolor{keywordflow}{if} (vm.count(fKey) != 0u) \{\textcolor{comment}{//find required argument filename}
+56                 filename = vm[fKey].as<std::string>();
+57                 \textcolor{keywordflow}{if} (filename.empty()) \{
+58                     \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"empty value of the filename argument"});
+59                 \}
+60             \} \textcolor{keywordflow}{else} \{\textcolor{comment}{//if not found, sent error}
+61                 \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"the option \(\backslash\)"filename\(\backslash\)" is required but missing"});
+62             \}
+63             \textcolor{keywordflow}{if} (vm.count(iKey) != 0u) \{\textcolor{comment}{//find required argument input vertex}
+64                 input = vm[iKey].as<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>();
+65                 \textcolor{keywordflow}{if} (input <= 0) \{
+66                     \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"negative value of the input vertex argument"});
+67                 \}
+68             \} \textcolor{keywordflow}{else} \{\textcolor{comment}{//if not found, sent error}
+69                 \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"the option \(\backslash\)" input vertex \(\backslash\)" is required but missing"});
+70             \}
+71 
+72             \textcolor{keywordflow}{if} (vm.count(oKey) != 0u) \{\textcolor{comment}{//find required argument output vertex}
+73                 out = vm[oKey].as<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>();
+74                 \textcolor{keywordflow}{if} (out <= 0) \{
+75                     \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"negative value of the output vertex argument"});
+76                 \}
+77             \} \textcolor{keywordflow}{else} \{\textcolor{comment}{//if not found, sent error}
+78                 \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"the option \(\backslash\)" output vertex \(\backslash\)" is required but missing"});
+79             \}
+80 
+81             boost::system::error\_code errorCode;
+82             \hyperlink{a00037_a57c94e914d9aaa3af892f8a74f8b23a6_a57c94e914d9aaa3af892f8a74f8b23a6}{isValidFile}(filename, errorCode) ?
+83             \hyperlink{a00002_a7eb42d6b80eabc27953b1e2ddb08f7f1_a7eb42d6b80eabc27953b1e2ddb08f7f1}{findShortestPath}(filename, input, out) : \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"invalid value "} + filename
+       + \textcolor{stringliteral}{" "} + errorCode.message());
+84 
+85         \}\textcolor{comment}{//prepareFindMinimumPathMode}
+\end{DoxyCode}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!prepare\+Generate\+Graph\+Mode@{prepare\+Generate\+Graph\+Mode}}
+\index{prepare\+Generate\+Graph\+Mode@{prepare\+Generate\+Graph\+Mode}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{prepare\+Generate\+Graph\+Mode(const po\+::variables\+\_\+map \&vm)}{prepareGenerateGraphMode(const po::variables_map &vm)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::prepare\+Generate\+Graph\+Mode (
+\begin{DoxyParamCaption}
+\item[{const po\+::variables\+\_\+map \&}]{vm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00002_af2d4ef90c6ccee55da52f5a5a1c69693_af2d4ef90c6ccee55da52f5a5a1c69693}{}\label{a00002_af2d4ef90c6ccee55da52f5a5a1c69693_af2d4ef90c6ccee55da52f5a5a1c69693}
+
+
+prepare\+Generate\+Graph\+Mode -\/ checks the correctness of the mode parameters and sent command to run mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vm} & -\/ boost\+::program\+\_\+options variable map with program arguments \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+87                                                                                \{
+88             std::string filename;\textcolor{comment}{//output filename}
+89             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} number = 0;\textcolor{comment}{//number of vertex}
+90             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} probability = 0;\textcolor{comment}{//probability of appearance of an edge between vertices in percent}
+91             \textcolor{keyword}{const} \textcolor{keyword}{auto} fKey = \textcolor{stringliteral}{"file"};
+92             \textcolor{keyword}{const} \textcolor{keyword}{auto} nKey = \textcolor{stringliteral}{"number"};
+93             \textcolor{keyword}{const} \textcolor{keyword}{auto} pKey = \textcolor{stringliteral}{"probability"};
+94             \textcolor{keywordflow}{if} (vm.count(fKey) != 0u) \{\textcolor{comment}{//find required argument filename}
+95                 filename = vm[fKey].as<std::string>();
+96                 \textcolor{keywordflow}{if} (filename.empty()) \{
+97                     \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"empty value of the filename argument"});
+98                 \}
+99             \} \textcolor{keywordflow}{else} \{\textcolor{comment}{//if not found, sent error}
+100                 \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"the option \(\backslash\)"filename\(\backslash\)" is required but missing"});
+101             \}
+102             \textcolor{keywordflow}{if} (vm.count(nKey) != 0u) \{\textcolor{comment}{//find required argument number of vertex}
+103                 number = vm[nKey].as<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>();
+104                 \textcolor{keywordflow}{if} (number <= \hyperlink{a00002_a25b69ee820b15148121a85e344f6d26a_a25b69ee820b15148121a85e344f6d26a}{MINIMUM\_VERTEX\_NUMBER}) \{
+105                     \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"invalid value of the number of vertex argument"});
+106                 \}
+107             \} \textcolor{keywordflow}{else} \{\textcolor{comment}{//if not found, sent error}
+108                 \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"the option \(\backslash\)"number of vertex\(\backslash\)" is required but missing"});
+109             \}
+110 
+111             \textcolor{keywordflow}{if} (vm.count(pKey) != 0u) \{\textcolor{comment}{//find required argument probability}
+112                 probability = vm[pKey].as<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>();
+113                 \textcolor{keywordflow}{if} (probability <= 0) \{
+114                     \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"negative value of the probability argument"});
+115                 \}
+116             \} \textcolor{keywordflow}{else} \{\textcolor{comment}{//if not found, sent error}
+117                 \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"the option \(\backslash\)" probability \(\backslash\)" is required but missing"});
+118             \}
+119             \hyperlink{a00002_a5a6e6dd3ac7502d0269b2756383f1923_a5a6e6dd3ac7502d0269b2756383f1923}{generateGraph}(filename, number, probability);
+120         \}
+\end{DoxyCode}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!start\+Parsing@{start\+Parsing}}
+\index{start\+Parsing@{start\+Parsing}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{start\+Parsing(int argc, char $\ast$argv[])}{startParsing(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::start\+Parsing (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{a00002_a9d84b7749b05e439efcd353dde3e0586_a9d84b7749b05e439efcd353dde3e0586}{}\label{a00002_a9d84b7749b05e439efcd353dde3e0586_a9d84b7749b05e439efcd353dde3e0586}
+
+
+start\+Parsing start command line arguments parser 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & count of arguments \\
+\hline
+{\em argv} & -\/ values of arguments \\
+\hline
+\end{DoxyParams}
+Concrete variables map which store variables in real map. This class is derived from std\+::map$<$std\+::string, variable\+\_\+value$>$, so you can use all map operators to examine its content.
+\begin{DoxyCode}
+127                                                                 \{
+132             po::variables\_map vm;\textcolor{comment}{//}
+133             po::parsed\_options parsed =\textcolor{comment}{//magic}
+134                     po::command\_line\_parser(argc, argv).options(
+      \hyperlink{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{generalDescription\_}).allow\_unregistered().run();
+135 
+136             po::store(parsed, vm);\textcolor{comment}{//more magic}
+137             po::notify(vm);\textcolor{comment}{//even more magic}
+138 
+139             \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"help"}) != 0u) \{\textcolor{comment}{//if found a help flag}
+140                 std::cout << \hyperlink{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{generalDescription\_};\textcolor{comment}{//show help}
+141                 \textcolor{keywordflow}{return};
+142             \}
+143 
+144             \textcolor{keywordflow}{if} (\hyperlink{a00002_ad8127feed7d8312f07ef9a52f6e06f03_ad8127feed7d8312f07ef9a52f6e06f03}{mode\_} == \hyperlink{a00002_a552c30c543bb251f8c43b528ce8d3537_a552c30c543bb251f8c43b528ce8d3537}{SHORTEST\_PATH}) \{\textcolor{comment}{//check program mode}
+145                 \hyperlink{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{generalDescription\_}.add(
+      \hyperlink{a00002_a6ed91e0b976c665765f35aa51fefba87_a6ed91e0b976c665765f35aa51fefba87}{findShortestPathModeDescription\_});\textcolor{comment}{//add FIND\_MINIMAL\_PATH mode options
+       descriptions}
+146                 po::store(po::parse\_command\_line(argc, argv, \hyperlink{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{generalDescription\_}), vm);
+147                 \hyperlink{a00002_a6d3c420cce837286647b227f1dc3c5d9_a6d3c420cce837286647b227f1dc3c5d9}{prepareFindMinimumPathMode}(vm);\textcolor{comment}{//}
+148             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00002_ad8127feed7d8312f07ef9a52f6e06f03_ad8127feed7d8312f07ef9a52f6e06f03}{mode\_} == \hyperlink{a00002_a4b56bd44886c90debd323f54761489a6_a4b56bd44886c90debd323f54761489a6}{GENERATE\_GRAPH}) \{
+149                 \hyperlink{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{generalDescription\_}.add(
+      \hyperlink{a00002_aaa15954a88f93131e4c17223eafc11c5_aaa15954a88f93131e4c17223eafc11c5}{generateGraphModeDescription\_});
+150                 po::store(po::parse\_command\_line(argc, argv, \hyperlink{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{generalDescription\_}), vm);
+151                 \hyperlink{a00002_af2d4ef90c6ccee55da52f5a5a1c69693_af2d4ef90c6ccee55da52f5a5a1c69693}{prepareGenerateGraphMode}(vm);
+152             \} \textcolor{keywordflow}{else} \{
+153                 \hyperlink{a00002_a87a2f3f5782023b4ed03aedc00094c01_a87a2f3f5782023b4ed03aedc00094c01}{error}(\textcolor{stringliteral}{"unknown program mode"});
+154             \}
+155 
+156         \}\textcolor{comment}{// startParsing}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!find\+Shortest\+Path@{find\+Shortest\+Path}}
+\index{find\+Shortest\+Path@{find\+Shortest\+Path}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{find\+Shortest\+Path}{findShortestPath}}]{\setlength{\rightskip}{0pt plus 5cm}bs\+::signal$<$void(const std\+::string \&filename, const unsigned int in\+Vertex, const unsigned int out\+Vertex)$>$ min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::find\+Shortest\+Path}\hypertarget{a00002_a7eb42d6b80eabc27953b1e2ddb08f7f1_a7eb42d6b80eabc27953b1e2ddb08f7f1}{}\label{a00002_a7eb42d6b80eabc27953b1e2ddb08f7f1_a7eb42d6b80eabc27953b1e2ddb08f7f1}
+
+
+find\+Min\+Path -\/ the program switching signal to the   -\/ input filename  -\/ input vertex number  -\/ output vertex number 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!find\+Shortest\+Path\+Mode\+Description\+\_\+@{find\+Shortest\+Path\+Mode\+Description\+\_\+}}
+\index{find\+Shortest\+Path\+Mode\+Description\+\_\+@{find\+Shortest\+Path\+Mode\+Description\+\_\+}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{find\+Shortest\+Path\+Mode\+Description\+\_\+}{findShortestPathModeDescription_}}]{\setlength{\rightskip}{0pt plus 5cm}po\+::options\+\_\+description min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::find\+Shortest\+Path\+Mode\+Description\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00002_a6ed91e0b976c665765f35aa51fefba87_a6ed91e0b976c665765f35aa51fefba87}{}\label{a00002_a6ed91e0b976c665765f35aa51fefba87_a6ed91e0b976c665765f35aa51fefba87}
+
+
+find\+Min\+Path\+Description\+\_\+ -\/ description of the shortest path search mode 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!general\+Description\+\_\+@{general\+Description\+\_\+}}
+\index{general\+Description\+\_\+@{general\+Description\+\_\+}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{general\+Description\+\_\+}{generalDescription_}}]{\setlength{\rightskip}{0pt plus 5cm}po\+::options\+\_\+description min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::general\+Description\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}{}\label{a00002_a1fa87430e08e605b208fd532e73ac236_a1fa87430e08e605b208fd532e73ac236}
+
+
+general\+Description\+\_\+ -\/ command line options description 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH@{G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH}}
+\index{G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH@{G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH}{GENERATE_GRAPH}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH = \char`\"{}generate\char`\"{}}\hypertarget{a00002_a4b56bd44886c90debd323f54761489a6_a4b56bd44886c90debd323f54761489a6}{}\label{a00002_a4b56bd44886c90debd323f54761489a6_a4b56bd44886c90debd323f54761489a6}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!generate\+Graph@{generate\+Graph}}
+\index{generate\+Graph@{generate\+Graph}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{generate\+Graph}{generateGraph}}]{\setlength{\rightskip}{0pt plus 5cm}bs\+::signal$<$void(const std\+::string \&filename, const unsigned int vertex\+Number, const unsigned int probability)$>$ min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::generate\+Graph}\hypertarget{a00002_a5a6e6dd3ac7502d0269b2756383f1923_a5a6e6dd3ac7502d0269b2756383f1923}{}\label{a00002_a5a6e6dd3ac7502d0269b2756383f1923_a5a6e6dd3ac7502d0269b2756383f1923}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!generate\+Graph\+Mode\+Description\+\_\+@{generate\+Graph\+Mode\+Description\+\_\+}}
+\index{generate\+Graph\+Mode\+Description\+\_\+@{generate\+Graph\+Mode\+Description\+\_\+}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{generate\+Graph\+Mode\+Description\+\_\+}{generateGraphModeDescription_}}]{\setlength{\rightskip}{0pt plus 5cm}po\+::options\+\_\+description min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::generate\+Graph\+Mode\+Description\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00002_aaa15954a88f93131e4c17223eafc11c5_aaa15954a88f93131e4c17223eafc11c5}{}\label{a00002_aaa15954a88f93131e4c17223eafc11c5_aaa15954a88f93131e4c17223eafc11c5}
+
+
+generate\+Graph\+Description\+\_\+ -\/ description of the generate graph mode 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER@{M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER}}
+\index{M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER@{M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER}{MINIMUM_VERTEX_NUMBER}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER = 3}\hypertarget{a00002_a25b69ee820b15148121a85e344f6d26a_a25b69ee820b15148121a85e344f6d26a}{}\label{a00002_a25b69ee820b15148121a85e344f6d26a_a25b69ee820b15148121a85e344f6d26a}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!mode\+\_\+@{mode\+\_\+}}
+\index{mode\+\_\+@{mode\+\_\+}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{mode\+\_\+}{mode_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::mode\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00002_ad8127feed7d8312f07ef9a52f6e06f03_ad8127feed7d8312f07ef9a52f6e06f03}{}\label{a00002_ad8127feed7d8312f07ef9a52f6e06f03_ad8127feed7d8312f07ef9a52f6e06f03}
+
+
+mode\+\_\+ -\/ string program mode 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH@{S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH}}
+\index{S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH@{S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH}{SHORTEST_PATH}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH = \char`\"{}minpath\char`\"{}}\hypertarget{a00002_a552c30c543bb251f8c43b528ce8d3537_a552c30c543bb251f8c43b528ce8d3537}{}\label{a00002_a552c30c543bb251f8c43b528ce8d3537_a552c30c543bb251f8c43b528ce8d3537}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/args\+\_\+parser/include/\hyperlink{a00011}{argument\+\_\+parser.\+hpp}\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/args\+\_\+parser/src/\hyperlink{a00013}{argument\+\_\+parser.\+cpp}\end{DoxyCompactItemize}

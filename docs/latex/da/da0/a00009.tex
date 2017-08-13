@@ -1,0 +1,242 @@
+\hypertarget{a00009}{}\section{min\+\_\+path\+:\+:command\+\_\+handler\+:\+:Invoker Class Reference}
+\label{a00009}\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+
+
+{\ttfamily \#include $<$invoker.\+hpp$>$}
+
+
+
+Collaboration diagram for min\+\_\+path\+:\+:command\+\_\+handler\+:\+:Invoker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{d8/d53/a00081}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00009_a6e5e462211d17404ba6d656bec647d7c_a6e5e462211d17404ba6d656bec647d7c}{Invoker} ()=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00009}{Invoker} -\/ constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{a00009_a76fd06a765d40c6179dfa0cab5cbd978_a76fd06a765d40c6179dfa0cab5cbd978}{$\sim$\+Invoker} ()=default
+\begin{DoxyCompactList}\small\item\em $\sim$\+Invoker -\/ destructor \end{DoxyCompactList}\item 
+\hyperlink{a00009_a2055f499946cba7327b5c3632061d1ce_a2055f499946cba7327b5c3632061d1ce}{Invoker} (const \hyperlink{a00009}{Invoker} \&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00009}{Invoker} -\/ copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00009_a4e3d12bafbf74728a2aee31361be4fb0_a4e3d12bafbf74728a2aee31361be4fb0}{Invoker} (\hyperlink{a00009}{Invoker} \&\&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00009}{Invoker} -\/ move constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00009}{Invoker} \& \hyperlink{a00009_ac94844d9754016a60334572f4a288aa7_ac94844d9754016a60334572f4a288aa7}{operator=} (const \hyperlink{a00009}{Invoker} \&)=default
+\begin{DoxyCompactList}\small\item\em operator= -\/ copy assignment operator \end{DoxyCompactList}\item 
+\hyperlink{a00009}{Invoker} \& \hyperlink{a00009_ad6797b918ce58ab2c26e686bb15523c8_ad6797b918ce58ab2c26e686bb15523c8}{operator=} (\hyperlink{a00009}{Invoker} \&\&)=default
+\begin{DoxyCompactList}\small\item\em operator= move assignment operator \end{DoxyCompactList}\item 
+void \hyperlink{a00009_a163bf285dbd0fc8e66aaba2cd09342ca_a163bf285dbd0fc8e66aaba2cd09342ca}{generate\+Graph} (const std\+::string \&filename, unsigned int vertex\+Number, unsigned int probability)
+\begin{DoxyCompactList}\small\item\em generate\+Graph create \hyperlink{a00006}{Generate\+Graph\+Command} and send to \hyperlink{a00003}{Command\+Handler} \end{DoxyCompactList}\item 
+void \hyperlink{a00009_a72677b42fdf6246c51faad0985b3a8b3_a72677b42fdf6246c51faad0985b3a8b3}{find\+Shortest\+Path} (const std\+::string \&filename, unsigned int in\+Vertex, unsigned int out\+Vertex)
+\begin{DoxyCompactList}\small\item\em find\+Shortest\+Path create Find\+Shortest\+Command and send to \hyperlink{a00003}{Command\+Handler}  -\/ input filename  -\/ input vertex number  -\/ output vertex number \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bs\+::signal$<$ void(std\+::shared\+\_\+ptr$<$ \hyperlink{a00008}{I\+Command} $>$ \&command)$>$ \hyperlink{a00009_a9586c0c0672e02050699b4c95fd78169_a9586c0c0672e02050699b4c95fd78169}{start}
+\begin{DoxyCompactList}\small\item\em start -\/ boost signal for sending command to \hyperlink{a00003}{Command\+Handler} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{a00008}{I\+Command} $>$ \hyperlink{a00009_a2dcd35f7919ab87fb64ee9db7b992985_a2dcd35f7919ab87fb64ee9db7b992985}{create\+Generate\+Graph\+Command} (const std\+::string \&filename, unsigned int vertex\+Number, unsigned int probability)
+\begin{DoxyCompactList}\small\item\em create\+Generate\+Graph\+Command -\/ create new exemplar of \hyperlink{a00006}{Generate\+Graph\+Command} \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{a00008}{I\+Command} $>$ \hyperlink{a00009_ae7a3065f6df1e6b9dc2af21f308a9346_ae7a3065f6df1e6b9dc2af21f308a9346}{create\+Find\+Shortest\+Command} (const std\+::string \&filename, unsigned int in\+Vertex, unsigned int out\+Vertex)
+\begin{DoxyCompactList}\small\item\em create create\+Find\+Shortest\+Command and send to \hyperlink{a00003}{Command\+Handler}  -\/ input filename  -\/ input vertex number  -\/ output vertex number \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+on the input data received from the client, it generates commands and passes it on to execution 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!Invoker@{Invoker}}
+\index{Invoker@{Invoker}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{Invoker()=default}{Invoker()=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::\+Invoker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00009_a6e5e462211d17404ba6d656bec647d7c_a6e5e462211d17404ba6d656bec647d7c}{}\label{a00009_a6e5e462211d17404ba6d656bec647d7c_a6e5e462211d17404ba6d656bec647d7c}
+
+
+\hyperlink{a00009}{Invoker} -\/ constructor. 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!````~Invoker@{$\sim$\+Invoker}}
+\index{````~Invoker@{$\sim$\+Invoker}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{$\sim$\+Invoker()=default}{~Invoker()=default}}]{\setlength{\rightskip}{0pt plus 5cm}virtual min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::$\sim$\+Invoker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}\hypertarget{a00009_a76fd06a765d40c6179dfa0cab5cbd978_a76fd06a765d40c6179dfa0cab5cbd978}{}\label{a00009_a76fd06a765d40c6179dfa0cab5cbd978_a76fd06a765d40c6179dfa0cab5cbd978}
+
+
+$\sim$\+Invoker -\/ destructor 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!Invoker@{Invoker}}
+\index{Invoker@{Invoker}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{Invoker(const Invoker \&)=default}{Invoker(const Invoker &)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::\+Invoker (
+\begin{DoxyParamCaption}
+\item[{const {\bf Invoker} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00009_a2055f499946cba7327b5c3632061d1ce_a2055f499946cba7327b5c3632061d1ce}{}\label{a00009_a2055f499946cba7327b5c3632061d1ce_a2055f499946cba7327b5c3632061d1ce}
+
+
+\hyperlink{a00009}{Invoker} -\/ copy constructor. 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!Invoker@{Invoker}}
+\index{Invoker@{Invoker}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{Invoker(\+Invoker \&\&)=default}{Invoker(Invoker &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::\+Invoker (
+\begin{DoxyParamCaption}
+\item[{{\bf Invoker} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00009_a4e3d12bafbf74728a2aee31361be4fb0_a4e3d12bafbf74728a2aee31361be4fb0}{}\label{a00009_a4e3d12bafbf74728a2aee31361be4fb0_a4e3d12bafbf74728a2aee31361be4fb0}
+
+
+\hyperlink{a00009}{Invoker} -\/ move constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!create\+Find\+Shortest\+Command@{create\+Find\+Shortest\+Command}}
+\index{create\+Find\+Shortest\+Command@{create\+Find\+Shortest\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{create\+Find\+Shortest\+Command(const std\+::string \&filename, unsigned int in\+Vertex, unsigned int out\+Vertex)}{createFindShortestCommand(const std::string &filename, unsigned int inVertex, unsigned int outVertex)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf I\+Command} $>$ min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::create\+Find\+Shortest\+Command (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename, }
+\item[{unsigned int}]{in\+Vertex, }
+\item[{unsigned int}]{out\+Vertex}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00009_ae7a3065f6df1e6b9dc2af21f308a9346_ae7a3065f6df1e6b9dc2af21f308a9346}{}\label{a00009_ae7a3065f6df1e6b9dc2af21f308a9346_ae7a3065f6df1e6b9dc2af21f308a9346}
+
+
+create create\+Find\+Shortest\+Command and send to \hyperlink{a00003}{Command\+Handler}  -\/ input filename  -\/ input vertex number  -\/ output vertex number 
+
+\begin{DoxyReturn}{Returns}
+new exemplar of Find\+Shortest\+Command class 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+33                                                                                                    \{
+34             \textcolor{keywordflow}{return} std::make\_shared<FindShortestPathCommand>(filename, inVertex, outVertex);
+35         \}\textcolor{comment}{//createFindShortestCommand}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!create\+Generate\+Graph\+Command@{create\+Generate\+Graph\+Command}}
+\index{create\+Generate\+Graph\+Command@{create\+Generate\+Graph\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{create\+Generate\+Graph\+Command(const std\+::string \&filename, unsigned int vertex\+Number, unsigned int probability)}{createGenerateGraphCommand(const std::string &filename, unsigned int vertexNumber, unsigned int probability)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf I\+Command} $>$ min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::create\+Generate\+Graph\+Command (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename, }
+\item[{unsigned int}]{vertex\+Number, }
+\item[{unsigned int}]{probability}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00009_a2dcd35f7919ab87fb64ee9db7b992985_a2dcd35f7919ab87fb64ee9db7b992985}{}\label{a00009_a2dcd35f7919ab87fb64ee9db7b992985_a2dcd35f7919ab87fb64ee9db7b992985}
+
+
+create\+Generate\+Graph\+Command -\/ create new exemplar of \hyperlink{a00006}{Generate\+Graph\+Command} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input filename \\
+\hline
+{\em vertex\+Number} & -\/ number of vertex \\
+\hline
+{\em probability} & -\/ probability of appearance of an edge between vertices in percent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new exemplar of \hyperlink{a00006}{Generate\+Graph\+Command} class 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+27                                                                                                       \{
+28             \textcolor{keywordflow}{return} std::make\_shared<GenerateGraphCommand>(filename, vertexNumber, probability);
+29         \}\textcolor{comment}{//createGenerateGraphCommand}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!find\+Shortest\+Path@{find\+Shortest\+Path}}
+\index{find\+Shortest\+Path@{find\+Shortest\+Path}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{find\+Shortest\+Path(const std\+::string \&filename, unsigned int in\+Vertex, unsigned int out\+Vertex)}{findShortestPath(const std::string &filename, unsigned int inVertex, unsigned int outVertex)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::find\+Shortest\+Path (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename, }
+\item[{unsigned int}]{in\+Vertex, }
+\item[{unsigned int}]{out\+Vertex}
+\end{DoxyParamCaption}
+)}\hypertarget{a00009_a72677b42fdf6246c51faad0985b3a8b3_a72677b42fdf6246c51faad0985b3a8b3}{}\label{a00009_a72677b42fdf6246c51faad0985b3a8b3_a72677b42fdf6246c51faad0985b3a8b3}
+
+
+find\+Shortest\+Path create Find\+Shortest\+Command and send to \hyperlink{a00003}{Command\+Handler}  -\/ input filename  -\/ input vertex number  -\/ output vertex number 
+
+
+\begin{DoxyCode}
+20                                                                      \{
+21             \textcolor{keyword}{auto} command = \hyperlink{a00009_ae7a3065f6df1e6b9dc2af21f308a9346_ae7a3065f6df1e6b9dc2af21f308a9346}{createFindShortestCommand}(filename, inVertex, outVertex
+      );
+22             \hyperlink{a00009_a9586c0c0672e02050699b4c95fd78169_a9586c0c0672e02050699b4c95fd78169}{start}(command);
+23         \}\textcolor{comment}{//findShortestPath}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!generate\+Graph@{generate\+Graph}}
+\index{generate\+Graph@{generate\+Graph}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{generate\+Graph(const std\+::string \&filename, unsigned int vertex\+Number, unsigned int probability)}{generateGraph(const std::string &filename, unsigned int vertexNumber, unsigned int probability)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::generate\+Graph (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename, }
+\item[{unsigned int}]{vertex\+Number, }
+\item[{unsigned int}]{probability}
+\end{DoxyParamCaption}
+)}\hypertarget{a00009_a163bf285dbd0fc8e66aaba2cd09342ca_a163bf285dbd0fc8e66aaba2cd09342ca}{}\label{a00009_a163bf285dbd0fc8e66aaba2cd09342ca_a163bf285dbd0fc8e66aaba2cd09342ca}
+
+
+generate\+Graph create \hyperlink{a00006}{Generate\+Graph\+Command} and send to \hyperlink{a00003}{Command\+Handler} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input filename \\
+\hline
+{\em vertex\+Number} & -\/ number of vertex \\
+\hline
+{\em probability} & -\/ probability of appearance of an edge between vertices in percent \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+14                                                                     \{
+15             \textcolor{keyword}{auto} command = \hyperlink{a00009_a2dcd35f7919ab87fb64ee9db7b992985_a2dcd35f7919ab87fb64ee9db7b992985}{createGenerateGraphCommand}(filename, vertexNumber, 
+      probability);
+16             \hyperlink{a00009_a9586c0c0672e02050699b4c95fd78169_a9586c0c0672e02050699b4c95fd78169}{start}(command);
+17         \}\textcolor{comment}{//generateGraph}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{operator=(const Invoker \&)=default}{operator=(const Invoker &)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Invoker}\& min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Invoker} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00009_ac94844d9754016a60334572f4a288aa7_ac94844d9754016a60334572f4a288aa7}{}\label{a00009_ac94844d9754016a60334572f4a288aa7_ac94844d9754016a60334572f4a288aa7}
+
+
+operator= -\/ copy assignment operator 
+
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{operator=(\+Invoker \&\&)=default}{operator=(Invoker &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Invoker}\& min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Invoker} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00009_ad6797b918ce58ab2c26e686bb15523c8_ad6797b918ce58ab2c26e686bb15523c8}{}\label{a00009_ad6797b918ce58ab2c26e686bb15523c8_ad6797b918ce58ab2c26e686bb15523c8}
+
+
+operator= move assignment operator 
+
+
+
+\subsection{Member Data Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}!start@{start}}
+\index{start@{start}!min\+\_\+path\+::command\+\_\+handler\+::\+Invoker@{min\+\_\+path\+::command\+\_\+handler\+::\+Invoker}}
+\subsubsection[{\texorpdfstring{start}{start}}]{\setlength{\rightskip}{0pt plus 5cm}bs\+::signal$<$void(std\+::shared\+\_\+ptr$<${\bf I\+Command}$>$ \&command)$>$ min\+\_\+path\+::command\+\_\+handler\+::\+Invoker\+::start}\hypertarget{a00009_a9586c0c0672e02050699b4c95fd78169_a9586c0c0672e02050699b4c95fd78169}{}\label{a00009_a9586c0c0672e02050699b4c95fd78169_a9586c0c0672e02050699b4c95fd78169}
+
+
+start -\/ boost signal for sending command to \hyperlink{a00003}{Command\+Handler} 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/include/\hyperlink{a00022}{invoker.\+hpp}\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/src/\hyperlink{a00027}{invoker.\+cpp}\end{DoxyCompactItemize}

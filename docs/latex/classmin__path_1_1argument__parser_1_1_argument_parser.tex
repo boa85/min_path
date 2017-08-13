@@ -1,0 +1,202 @@
+\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser}{}\section{min\+\_\+path\+:\+:argument\+\_\+parser\+:\+:Argument\+Parser Class Reference}
+\label{classmin__path_1_1argument__parser_1_1_argument_parser}\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+
+
+{\ttfamily \#include $<$argument\+\_\+parser.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_afd444aa0096628fee7fa3cd54dd8c00e}{Argument\+Parser} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} -\/ default constructor, init general\+Description\+\_\+. \end{DoxyCompactList}\item 
+\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a299b7d944021ccd4bb8d3f1f6edd0718}{$\sim$\+Argument\+Parser} ()=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} -\/ destructor. \end{DoxyCompactList}\item 
+\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a90ccb3b7ce3f2c34a0b78533a0f6c128}{Argument\+Parser} (const \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} \&)=delete
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} -\/ copy constructor, is forbidden because the signals are not copied. \end{DoxyCompactList}\item 
+\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a84ce25cfd160d268d2c318a3c52c08fa}{Argument\+Parser} (\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} \&\&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} -\/ move constructor. \end{DoxyCompactList}\item 
+\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} \& \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a5c4f3f8135e422646c435d831044528d}{operator=} (const \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} \&)=delete
+\begin{DoxyCompactList}\small\item\em operator= -\/ copy assignment operator, is forbidden because the signals are not copied \end{DoxyCompactList}\item 
+\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} \& \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a5158bbe2aac6767154d0e25a8cb66a6a}{operator=} (\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em move assignment operator, is forbidden because the boost\+::program\+\_\+options are not assignment \end{DoxyCompactList}\item 
+void \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a9d84b7749b05e439efcd353dde3e0586}{start\+Parsing} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em start\+Parsing start command line arguments parser \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bs\+::signal$<$ void(const std\+::string \&filename, const unsigned int in\+Vertex, const unsigned int out\+Vertex)$>$ \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a7eb42d6b80eabc27953b1e2ddb08f7f1}{find\+Shortest\+Path}
+\begin{DoxyCompactList}\small\item\em find\+Min\+Path -\/ the program switching signal to the   -\/ input filename  -\/ input vertex number  -\/ output vertex number \end{DoxyCompactList}\item 
+bs\+::signal$<$ void(const std\+::string \&filename, const unsigned int vertex\+Number, const unsigned int probability)$>$ \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a5a6e6dd3ac7502d0269b2756383f1923}{generate\+Graph}
+\item 
+const unsigned int \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a25b69ee820b15148121a85e344f6d26a}{M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER} = 3
+\item 
+const std\+::string \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a552c30c543bb251f8c43b528ce8d3537}{S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH} = \char`\"{}minpath\char`\"{}
+\item 
+const std\+::string \hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser_a4b56bd44886c90debd323f54761489a6}{G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH} = \char`\"{}generate\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+line arguments parser, based on boost\+::program\+\_\+options 
+
+Definition at line 24 of file argument\+\_\+parser.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!Argument\+Parser@{Argument\+Parser}}
+\index{Argument\+Parser@{Argument\+Parser}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{Argument\+Parser()}{ArgumentParser()}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+Argument\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_afd444aa0096628fee7fa3cd54dd8c00e}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_afd444aa0096628fee7fa3cd54dd8c00e}
+
+
+\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} -\/ default constructor, init general\+Description\+\_\+. 
+
+
+
+Definition at line 13 of file argument\+\_\+parser.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classmin__path_1_1argument__parser_1_1_argument_parser_afd444aa0096628fee7fa3cd54dd8c00e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!````~Argument\+Parser@{$\sim$\+Argument\+Parser}}
+\index{````~Argument\+Parser@{$\sim$\+Argument\+Parser}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{$\sim$\+Argument\+Parser()=default}{~ArgumentParser()=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::$\sim$\+Argument\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a299b7d944021ccd4bb8d3f1f6edd0718}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a299b7d944021ccd4bb8d3f1f6edd0718}
+
+
+\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} -\/ destructor. 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!Argument\+Parser@{Argument\+Parser}}
+\index{Argument\+Parser@{Argument\+Parser}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{Argument\+Parser(const Argument\+Parser \&)=delete}{ArgumentParser(const ArgumentParser &)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+Argument\+Parser (
+\begin{DoxyParamCaption}
+\item[{const {\bf Argument\+Parser} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a90ccb3b7ce3f2c34a0b78533a0f6c128}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a90ccb3b7ce3f2c34a0b78533a0f6c128}
+
+
+\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} -\/ copy constructor, is forbidden because the signals are not copied. 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!Argument\+Parser@{Argument\+Parser}}
+\index{Argument\+Parser@{Argument\+Parser}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{Argument\+Parser(\+Argument\+Parser \&\&)=default}{ArgumentParser(ArgumentParser &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+Argument\+Parser (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument\+Parser} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a84ce25cfd160d268d2c318a3c52c08fa}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a84ce25cfd160d268d2c318a3c52c08fa}
+
+
+\hyperlink{classmin__path_1_1argument__parser_1_1_argument_parser}{Argument\+Parser} -\/ move constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{operator=(const Argument\+Parser \&)=delete}{operator=(const ArgumentParser &)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Argument\+Parser}\& min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Argument\+Parser} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a5c4f3f8135e422646c435d831044528d}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a5c4f3f8135e422646c435d831044528d}
+
+
+operator= -\/ copy assignment operator, is forbidden because the signals are not copied 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{operator=(\+Argument\+Parser \&\&)=delete}{operator=(ArgumentParser &&)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Argument\+Parser}\& min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument\+Parser} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a5158bbe2aac6767154d0e25a8cb66a6a}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a5158bbe2aac6767154d0e25a8cb66a6a}
+
+
+move assignment operator, is forbidden because the boost\+::program\+\_\+options are not assignment 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!start\+Parsing@{start\+Parsing}}
+\index{start\+Parsing@{start\+Parsing}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{start\+Parsing(int argc, char $\ast$argv[])}{startParsing(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::start\+Parsing (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a9d84b7749b05e439efcd353dde3e0586}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a9d84b7749b05e439efcd353dde3e0586}
+
+
+start\+Parsing start command line arguments parser 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & count of arguments \\
+\hline
+{\em argv} & -\/ values of arguments \\
+\hline
+\end{DoxyParams}
+Concrete variables map which store variables in real map. This class is derived from std\+::map$<$std\+::string, variable\+\_\+value$>$, so you can use all map operators to examine its content.
+
+Definition at line 127 of file argument\+\_\+parser.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!find\+Shortest\+Path@{find\+Shortest\+Path}}
+\index{find\+Shortest\+Path@{find\+Shortest\+Path}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{find\+Shortest\+Path}{findShortestPath}}]{\setlength{\rightskip}{0pt plus 5cm}bs\+::signal$<$void(const std\+::string \&filename, const unsigned int in\+Vertex, const unsigned int out\+Vertex)$>$ min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::find\+Shortest\+Path}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a7eb42d6b80eabc27953b1e2ddb08f7f1}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a7eb42d6b80eabc27953b1e2ddb08f7f1}
+
+
+find\+Min\+Path -\/ the program switching signal to the   -\/ input filename  -\/ input vertex number  -\/ output vertex number 
+
+
+
+Definition at line 63 of file argument\+\_\+parser.\+hpp.
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH@{G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH}}
+\index{G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH@{G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH}{GENERATE_GRAPH}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+G\+R\+A\+PH = \char`\"{}generate\char`\"{}}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a4b56bd44886c90debd323f54761489a6}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a4b56bd44886c90debd323f54761489a6}
+
+
+Definition at line 125 of file argument\+\_\+parser.\+hpp.
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!generate\+Graph@{generate\+Graph}}
+\index{generate\+Graph@{generate\+Graph}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{generate\+Graph}{generateGraph}}]{\setlength{\rightskip}{0pt plus 5cm}bs\+::signal$<$void(const std\+::string \&filename, const unsigned int vertex\+Number, const unsigned int probability)$>$ min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::generate\+Graph}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a5a6e6dd3ac7502d0269b2756383f1923}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a5a6e6dd3ac7502d0269b2756383f1923}
+
+
+Definition at line 66 of file argument\+\_\+parser.\+hpp.
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER@{M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER}}
+\index{M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER@{M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER}{MINIMUM_VERTEX_NUMBER}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+N\+U\+M\+B\+ER = 3}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a25b69ee820b15148121a85e344f6d26a}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a25b69ee820b15148121a85e344f6d26a}
+
+
+Definition at line 121 of file argument\+\_\+parser.\+hpp.
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}!S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH@{S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH}}
+\index{S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH@{S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH}!min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser@{min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser}}
+\subsubsection[{\texorpdfstring{S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH}{SHORTEST_PATH}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string min\+\_\+path\+::argument\+\_\+parser\+::\+Argument\+Parser\+::\+S\+H\+O\+R\+T\+E\+S\+T\+\_\+\+P\+A\+TH = \char`\"{}minpath\char`\"{}}\hypertarget{classmin__path_1_1argument__parser_1_1_argument_parser_a552c30c543bb251f8c43b528ce8d3537}{}\label{classmin__path_1_1argument__parser_1_1_argument_parser_a552c30c543bb251f8c43b528ce8d3537}
+
+
+Definition at line 123 of file argument\+\_\+parser.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/args\+\_\+parser/include/\hyperlink{argument__parser_8hpp}{argument\+\_\+parser.\+hpp}\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/args\+\_\+parser/src/\hyperlink{argument__parser_8cpp}{argument\+\_\+parser.\+cpp}\end{DoxyCompactItemize}

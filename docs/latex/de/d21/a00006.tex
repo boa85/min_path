@@ -1,0 +1,153 @@
+\hypertarget{a00006}{}\section{min\+\_\+path\+:\+:command\+\_\+handler\+:\+:Generate\+Graph\+Command Class Reference}
+\label{a00006}\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+
+
+{\ttfamily \#include $<$generate\+\_\+graph\+\_\+command.\+hpp$>$}
+
+
+
+Inheritance diagram for min\+\_\+path\+:\+:command\+\_\+handler\+:\+:Generate\+Graph\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{d9/da5/a00075}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for min\+\_\+path\+:\+:command\+\_\+handler\+:\+:Generate\+Graph\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{db/df8/a00076}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00006_ad023d97ba753b8ccc81548dec2874d16_ad023d97ba753b8ccc81548dec2874d16}{Generate\+Graph\+Command} (const std\+::string \&filename, unsigned int vertex\+Number, unsigned int probability)
+\item 
+\hyperlink{a00006_a15521f939e551a1f8a02e0051cad75e6_a15521f939e551a1f8a02e0051cad75e6}{$\sim$\+Generate\+Graph\+Command} () override=default
+\item 
+\hyperlink{a00006_ac6c083c3a1125922bece382628be07b4_ac6c083c3a1125922bece382628be07b4}{Generate\+Graph\+Command} (const \hyperlink{a00006}{Generate\+Graph\+Command} \&command)=default
+\item 
+\hyperlink{a00006_a5413de4b4729b780acb8219a72940535_a5413de4b4729b780acb8219a72940535}{Generate\+Graph\+Command} (\hyperlink{a00006}{Generate\+Graph\+Command} \&\&command)=default
+\item 
+\hyperlink{a00006}{Generate\+Graph\+Command} \& \hyperlink{a00006_a0c20d65ffe490778db13d9b02c8a93f3_a0c20d65ffe490778db13d9b02c8a93f3}{operator=} (const \hyperlink{a00006}{Generate\+Graph\+Command} \&command)=delete
+\item 
+\hyperlink{a00006}{Generate\+Graph\+Command} \& \hyperlink{a00006_a78458bc559961c2cc08a64882fdd5261_a78458bc559961c2cc08a64882fdd5261}{operator=} (\hyperlink{a00006}{Generate\+Graph\+Command} \&\&command)=delete
+\item 
+void \hyperlink{a00006_ab12982f085f5974e6922aca8959400af_ab12982f085f5974e6922aca8959400af}{execute} () override
+\begin{DoxyCompactList}\small\item\em execute -\/ pure virtual method, override in derived classes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \hyperlink{a00006_aa8a646c7d25122a9f46e7781997e1241_aa8a646c7d25122a9f46e7781997e1241}{filename\+\_\+}
+\item 
+const unsigned int \hyperlink{a00006_abe00a97efbb0dc5b24c4736e2381cfc0_abe00a97efbb0dc5b24c4736e2381cfc0}{vertex\+Number\+\_\+}
+\item 
+const unsigned int \hyperlink{a00006_a48a02d76a585abe00fdedcaf5c392f32_a48a02d76a585abe00fdedcaf5c392f32}{probability\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}!Generate\+Graph\+Command@{Generate\+Graph\+Command}}
+\index{Generate\+Graph\+Command@{Generate\+Graph\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+\subsubsection[{\texorpdfstring{Generate\+Graph\+Command(const std\+::string \&filename, unsigned int vertex\+Number, unsigned int probability)}{GenerateGraphCommand(const std::string &filename, unsigned int vertexNumber, unsigned int probability)}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command\+::\+Generate\+Graph\+Command (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename, }
+\item[{unsigned int}]{vertex\+Number, }
+\item[{unsigned int}]{probability}
+\end{DoxyParamCaption}
+)}\hypertarget{a00006_ad023d97ba753b8ccc81548dec2874d16_ad023d97ba753b8ccc81548dec2874d16}{}\label{a00006_ad023d97ba753b8ccc81548dec2874d16_ad023d97ba753b8ccc81548dec2874d16}
+
+\begin{DoxyCode}
+11                                                                                    : 
+      \hyperlink{a00006_aa8a646c7d25122a9f46e7781997e1241_aa8a646c7d25122a9f46e7781997e1241}{filename\_}(filename),
+12                                                                                      
+      \hyperlink{a00006_abe00a97efbb0dc5b24c4736e2381cfc0_abe00a97efbb0dc5b24c4736e2381cfc0}{vertexNumber\_}(vertexNumber),
+13                                                                                      
+      \hyperlink{a00006_a48a02d76a585abe00fdedcaf5c392f32_a48a02d76a585abe00fdedcaf5c392f32}{probability\_}(probability) \{\}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}!````~Generate\+Graph\+Command@{$\sim$\+Generate\+Graph\+Command}}
+\index{````~Generate\+Graph\+Command@{$\sim$\+Generate\+Graph\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+\subsubsection[{\texorpdfstring{$\sim$\+Generate\+Graph\+Command() override=default}{~GenerateGraphCommand() override=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command\+::$\sim$\+Generate\+Graph\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}\hypertarget{a00006_a15521f939e551a1f8a02e0051cad75e6_a15521f939e551a1f8a02e0051cad75e6}{}\label{a00006_a15521f939e551a1f8a02e0051cad75e6_a15521f939e551a1f8a02e0051cad75e6}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}!Generate\+Graph\+Command@{Generate\+Graph\+Command}}
+\index{Generate\+Graph\+Command@{Generate\+Graph\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+\subsubsection[{\texorpdfstring{Generate\+Graph\+Command(const Generate\+Graph\+Command \&command)=default}{GenerateGraphCommand(const GenerateGraphCommand &command)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command\+::\+Generate\+Graph\+Command (
+\begin{DoxyParamCaption}
+\item[{const {\bf Generate\+Graph\+Command} \&}]{command}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00006_ac6c083c3a1125922bece382628be07b4_ac6c083c3a1125922bece382628be07b4}{}\label{a00006_ac6c083c3a1125922bece382628be07b4_ac6c083c3a1125922bece382628be07b4}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}!Generate\+Graph\+Command@{Generate\+Graph\+Command}}
+\index{Generate\+Graph\+Command@{Generate\+Graph\+Command}!min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+\subsubsection[{\texorpdfstring{Generate\+Graph\+Command(\+Generate\+Graph\+Command \&\&command)=default}{GenerateGraphCommand(GenerateGraphCommand &&command)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command\+::\+Generate\+Graph\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf Generate\+Graph\+Command} \&\&}]{command}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00006_a5413de4b4729b780acb8219a72940535_a5413de4b4729b780acb8219a72940535}{}\label{a00006_a5413de4b4729b780acb8219a72940535_a5413de4b4729b780acb8219a72940535}
+
+
+\subsection{Member Function Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}!execute@{execute}}
+\index{execute@{execute}!min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+\subsubsection[{\texorpdfstring{execute() override}{execute() override}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{a00006_ab12982f085f5974e6922aca8959400af_ab12982f085f5974e6922aca8959400af}{}\label{a00006_ab12982f085f5974e6922aca8959400af_ab12982f085f5974e6922aca8959400af}
+
+
+execute -\/ pure virtual method, override in derived classes 
+
+
+
+Implements \hyperlink{a00008_ab821adbdef63ad2d9b33a222c2a98cc0_ab821adbdef63ad2d9b33a222c2a98cc0}{min\+\_\+path\+::command\+\_\+handler\+::\+I\+Command}.
+
+
+\begin{DoxyCode}
+15                                            \{
+16 
+17         \}\textcolor{comment}{//execute}
+\end{DoxyCode}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+\subsubsection[{\texorpdfstring{operator=(const Generate\+Graph\+Command \&command)=delete}{operator=(const GenerateGraphCommand &command)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generate\+Graph\+Command}\& min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Generate\+Graph\+Command} \&}]{command}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{a00006_a0c20d65ffe490778db13d9b02c8a93f3_a0c20d65ffe490778db13d9b02c8a93f3}{}\label{a00006_a0c20d65ffe490778db13d9b02c8a93f3_a0c20d65ffe490778db13d9b02c8a93f3}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+\subsubsection[{\texorpdfstring{operator=(\+Generate\+Graph\+Command \&\&command)=delete}{operator=(GenerateGraphCommand &&command)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generate\+Graph\+Command}\& min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Generate\+Graph\+Command} \&\&}]{command}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{a00006_a78458bc559961c2cc08a64882fdd5261_a78458bc559961c2cc08a64882fdd5261}{}\label{a00006_a78458bc559961c2cc08a64882fdd5261_a78458bc559961c2cc08a64882fdd5261}
+
+
+\subsection{Member Data Documentation}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}!filename\+\_\+@{filename\+\_\+}}
+\index{filename\+\_\+@{filename\+\_\+}!min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+\subsubsection[{\texorpdfstring{filename\+\_\+}{filename_}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command\+::filename\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00006_aa8a646c7d25122a9f46e7781997e1241_aa8a646c7d25122a9f46e7781997e1241}{}\label{a00006_aa8a646c7d25122a9f46e7781997e1241_aa8a646c7d25122a9f46e7781997e1241}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}!probability\+\_\+@{probability\+\_\+}}
+\index{probability\+\_\+@{probability\+\_\+}!min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+\subsubsection[{\texorpdfstring{probability\+\_\+}{probability_}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command\+::probability\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00006_a48a02d76a585abe00fdedcaf5c392f32_a48a02d76a585abe00fdedcaf5c392f32}{}\label{a00006_a48a02d76a585abe00fdedcaf5c392f32_a48a02d76a585abe00fdedcaf5c392f32}
+\index{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}!vertex\+Number\+\_\+@{vertex\+Number\+\_\+}}
+\index{vertex\+Number\+\_\+@{vertex\+Number\+\_\+}!min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command@{min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command}}
+\subsubsection[{\texorpdfstring{vertex\+Number\+\_\+}{vertexNumber_}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int min\+\_\+path\+::command\+\_\+handler\+::\+Generate\+Graph\+Command\+::vertex\+Number\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00006_abe00a97efbb0dc5b24c4736e2381cfc0_abe00a97efbb0dc5b24c4736e2381cfc0}{}\label{a00006_abe00a97efbb0dc5b24c4736e2381cfc0_abe00a97efbb0dc5b24c4736e2381cfc0}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/include/\hyperlink{a00019}{generate\+\_\+graph\+\_\+command.\+hpp}\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/src/\hyperlink{a00025}{generate\+\_\+graph\+\_\+command.\+cpp}\end{DoxyCompactItemize}

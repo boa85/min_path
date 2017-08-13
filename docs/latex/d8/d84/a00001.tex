@@ -1,0 +1,175 @@
+\hypertarget{a00001}{}\section{min\+\_\+path\+:\+:argument\+\_\+parser\+:\+:Args\+Parse\+Exception Class Reference}
+\label{a00001}\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}}
+
+
+{\ttfamily \#include $<$args\+\_\+parse\+\_\+exception.\+hpp$>$}
+
+
+
+Inheritance diagram for min\+\_\+path\+:\+:argument\+\_\+parser\+:\+:Args\+Parse\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{de/de1/a00065}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for min\+\_\+path\+:\+:argument\+\_\+parser\+:\+:Args\+Parse\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{d9/db3/a00066}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00001_a3d4b6c6bbd11120adce24e7f568db6ef_a3d4b6c6bbd11120adce24e7f568db6ef}{Args\+Parse\+Exception} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00001}{Args\+Parse\+Exception} -\/ constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00001_ac390957b5d1f525ebb0bad34d46e912c_ac390957b5d1f525ebb0bad34d46e912c}{Args\+Parse\+Exception} (const char $\ast$message)
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00001}{Args\+Parse\+Exception} -\/ constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00001_afe95d99b83df0d490a4804be85e93f64_afe95d99b83df0d490a4804be85e93f64}{Args\+Parse\+Exception} (const \hyperlink{a00001}{Args\+Parse\+Exception} \&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00001}{Args\+Parse\+Exception} -\/ copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00001}{Args\+Parse\+Exception} \& \hyperlink{a00001_acd3650bb1fa2d905628fe9221f51af91_acd3650bb1fa2d905628fe9221f51af91}{operator=} (const \hyperlink{a00001}{Args\+Parse\+Exception} \&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00001}{Args\+Parse\+Exception} -\/ copy assignment operator. \end{DoxyCompactList}\item 
+\hyperlink{a00001_a8f4184349561f76761c2a19ab5ffe3eb_a8f4184349561f76761c2a19ab5ffe3eb}{Args\+Parse\+Exception} (\hyperlink{a00001}{Args\+Parse\+Exception} \&\&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00001}{Args\+Parse\+Exception} -\/ move constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00001}{Args\+Parse\+Exception} \& \hyperlink{a00001_a995afc8f785651694e33408b2640a608_a995afc8f785651694e33408b2640a608}{operator=} (\hyperlink{a00001}{Args\+Parse\+Exception} \&\&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00001}{Args\+Parse\+Exception} -\/ move assignment operator. \end{DoxyCompactList}\item 
+\hyperlink{a00001_aa3c9c74381ce991e447711de119f9bb3_aa3c9c74381ce991e447711de119f9bb3}{$\sim$\+Args\+Parse\+Exception} () override=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00001}{Args\+Parse\+Exception} -\/ destructor. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{a00001_af541e83d297eb66a959230e739b0349f_af541e83d297eb66a959230e739b0349f}{what} () const override  throw ()
+\begin{DoxyCompactList}\small\item\em what -\/ override method \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+exception 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}!Args\+Parse\+Exception@{Args\+Parse\+Exception}}
+\index{Args\+Parse\+Exception@{Args\+Parse\+Exception}!min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}}
+\subsubsection[{\texorpdfstring{Args\+Parse\+Exception(const std\+::string \&message)}{ArgsParseException(const std::string &message)}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception\+::\+Args\+Parse\+Exception (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{a00001_a3d4b6c6bbd11120adce24e7f568db6ef_a3d4b6c6bbd11120adce24e7f568db6ef}{}\label{a00001_a3d4b6c6bbd11120adce24e7f568db6ef_a3d4b6c6bbd11120adce24e7f568db6ef}
+
+
+\hyperlink{a00001}{Args\+Parse\+Exception} -\/ constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & -\/ error message \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+10                 : std::logic\_error(message) \{\}
+\end{DoxyCode}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}!Args\+Parse\+Exception@{Args\+Parse\+Exception}}
+\index{Args\+Parse\+Exception@{Args\+Parse\+Exception}!min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}}
+\subsubsection[{\texorpdfstring{Args\+Parse\+Exception(const char $\ast$message)}{ArgsParseException(const char *message)}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception\+::\+Args\+Parse\+Exception (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{a00001_ac390957b5d1f525ebb0bad34d46e912c_ac390957b5d1f525ebb0bad34d46e912c}{}\label{a00001_ac390957b5d1f525ebb0bad34d46e912c_ac390957b5d1f525ebb0bad34d46e912c}
+
+
+\hyperlink{a00001}{Args\+Parse\+Exception} -\/ constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+17                 : std::logic\_error(message) \{\}
+\end{DoxyCode}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}!Args\+Parse\+Exception@{Args\+Parse\+Exception}}
+\index{Args\+Parse\+Exception@{Args\+Parse\+Exception}!min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}}
+\subsubsection[{\texorpdfstring{Args\+Parse\+Exception(const Args\+Parse\+Exception \&)=default}{ArgsParseException(const ArgsParseException &)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception\+::\+Args\+Parse\+Exception (
+\begin{DoxyParamCaption}
+\item[{const {\bf Args\+Parse\+Exception} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00001_afe95d99b83df0d490a4804be85e93f64_afe95d99b83df0d490a4804be85e93f64}{}\label{a00001_afe95d99b83df0d490a4804be85e93f64_afe95d99b83df0d490a4804be85e93f64}
+
+
+\hyperlink{a00001}{Args\+Parse\+Exception} -\/ copy constructor. 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}!Args\+Parse\+Exception@{Args\+Parse\+Exception}}
+\index{Args\+Parse\+Exception@{Args\+Parse\+Exception}!min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}}
+\subsubsection[{\texorpdfstring{Args\+Parse\+Exception(\+Args\+Parse\+Exception \&\&)=default}{ArgsParseException(ArgsParseException &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception\+::\+Args\+Parse\+Exception (
+\begin{DoxyParamCaption}
+\item[{{\bf Args\+Parse\+Exception} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00001_a8f4184349561f76761c2a19ab5ffe3eb_a8f4184349561f76761c2a19ab5ffe3eb}{}\label{a00001_a8f4184349561f76761c2a19ab5ffe3eb_a8f4184349561f76761c2a19ab5ffe3eb}
+
+
+\hyperlink{a00001}{Args\+Parse\+Exception} -\/ move constructor. 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}!````~Args\+Parse\+Exception@{$\sim$\+Args\+Parse\+Exception}}
+\index{````~Args\+Parse\+Exception@{$\sim$\+Args\+Parse\+Exception}!min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}}
+\subsubsection[{\texorpdfstring{$\sim$\+Args\+Parse\+Exception() override=default}{~ArgsParseException() override=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception\+::$\sim$\+Args\+Parse\+Exception (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}\hypertarget{a00001_aa3c9c74381ce991e447711de119f9bb3_aa3c9c74381ce991e447711de119f9bb3}{}\label{a00001_aa3c9c74381ce991e447711de119f9bb3_aa3c9c74381ce991e447711de119f9bb3}
+
+
+\hyperlink{a00001}{Args\+Parse\+Exception} -\/ destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}}
+\subsubsection[{\texorpdfstring{operator=(const Args\+Parse\+Exception \&)=default}{operator=(const ArgsParseException &)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Args\+Parse\+Exception}\& min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Args\+Parse\+Exception} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00001_acd3650bb1fa2d905628fe9221f51af91_acd3650bb1fa2d905628fe9221f51af91}{}\label{a00001_acd3650bb1fa2d905628fe9221f51af91_acd3650bb1fa2d905628fe9221f51af91}
+
+
+\hyperlink{a00001}{Args\+Parse\+Exception} -\/ copy assignment operator. 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}}
+\subsubsection[{\texorpdfstring{operator=(\+Args\+Parse\+Exception \&\&)=default}{operator=(ArgsParseException &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Args\+Parse\+Exception}\& min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Args\+Parse\+Exception} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00001_a995afc8f785651694e33408b2640a608_a995afc8f785651694e33408b2640a608}{}\label{a00001_a995afc8f785651694e33408b2640a608_a995afc8f785651694e33408b2640a608}
+
+
+\hyperlink{a00001}{Args\+Parse\+Exception} -\/ move assignment operator. 
+
+\index{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}!what@{what}}
+\index{what@{what}!min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception@{min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception}}
+\subsubsection[{\texorpdfstring{what() const override}{what() const override}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ min\+\_\+path\+::argument\+\_\+parser\+::\+Args\+Parse\+Exception\+::what (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const throw  ) \hspace{0.3cm}{\ttfamily [override]}}\hypertarget{a00001_af541e83d297eb66a959230e739b0349f_af541e83d297eb66a959230e739b0349f}{}\label{a00001_af541e83d297eb66a959230e739b0349f_af541e83d297eb66a959230e739b0349f}
+
+
+what -\/ override method 
+
+\begin{DoxyReturn}{Returns}
+Returns a C-\/style character string describing the general cause of the current error (the same string passed to the ctor). 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+12                                                            \{
+13             \textcolor{keywordflow}{return} std::logic\_error::what();
+14         \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/args\+\_\+parser/include/\hyperlink{a00010}{args\+\_\+parse\+\_\+exception.\+hpp}\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/args\+\_\+parser/src/\hyperlink{a00012}{args\+\_\+parse\+\_\+exception.\+cpp}\end{DoxyCompactItemize}

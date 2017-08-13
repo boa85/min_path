@@ -1,0 +1,53 @@
+\hypertarget{a00029}{}\section{/home/boa/\+C\+Lion\+Projects/min\+\_\+path/main.cpp File Reference}
+\label{a00029}\index{/home/boa/\+C\+Lion\+Projects/min\+\_\+path/main.\+cpp@{/home/boa/\+C\+Lion\+Projects/min\+\_\+path/main.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include \char`\"{}args\+\_\+parser/include/argument\+\_\+parser.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}command\+\_\+handler/include/command\+\_\+handler.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}command\+\_\+handler/include/invoker.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}args\+\_\+parser/include/args\+\_\+parse\+\_\+exception.\+hpp\char`\"{}}\\*
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d73/a00060}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00029_a0ddf1224851353fc92bfbff6f499fa97_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{a00029_a0ddf1224851353fc92bfbff6f499fa97_a0ddf1224851353fc92bfbff6f499fa97}{}\label{a00029_a0ddf1224851353fc92bfbff6f499fa97_a0ddf1224851353fc92bfbff6f499fa97}
+
+\begin{DoxyCode}
+20                                  \{
+21     \textcolor{keywordflow}{try} \{
+22         \textcolor{keyword}{auto} parser = std::make\_shared<ArgumentParser>();
+23         \textcolor{keyword}{auto} invoker = std::make\_shared<Invoker>();
+24         \textcolor{keyword}{auto} commandHandler = std::make\_shared<CommandHandler>();
+25         parser->generateGraph.connect(boost::bind(&Invoker::generateGraph, invoker, \_1, \_2, \_3));
+26         parser->findShortestPath.connect(boost::bind(&Invoker::findShortestPath, invoker, \_1, \_2, \_3));
+27         invoker->start.connect(boost::bind(&CommandHandler::start, commandHandler, \_1));
+28         parser->startParsing(argc, argv);
+29     \}
+30     \textcolor{keywordflow}{catch} (\hyperlink{a00001}{ArgsParseException} &e) \{
+31         std::cerr << e.\hyperlink{a00001_af541e83d297eb66a959230e739b0349f_af541e83d297eb66a959230e739b0349f}{what}() << std::endl;
+32     \}
+33     \textcolor{keywordflow}{catch} (std::exception &e) \{
+34         std::cerr << e.what() << std::endl;
+35     \}
+36 
+37     \textcolor{keywordflow}{return} 0;
+38 \}\end{DoxyCode}

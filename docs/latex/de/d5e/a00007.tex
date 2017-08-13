@@ -1,0 +1,429 @@
+\hypertarget{a00007}{}\section{min\+\_\+path\+:\+:graph\+\_\+builder\+:\+:Graph\+Builder Class Reference}
+\label{a00007}\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+
+
+{\ttfamily \#include $<$graph\+\_\+builder.\+hpp$>$}
+
+
+
+Collaboration diagram for min\+\_\+path\+:\+:graph\+\_\+builder\+:\+:Graph\+Builder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{d2/d1f/a00083}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00007_af8e42b34ae946ec91a86daea07379bb4_af8e42b34ae946ec91a86daea07379bb4}{Graph\+Builder} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00007}{Graph\+Builder} -\/ constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00007_a63770862e662bfa85ca917f2aa2085f7_a63770862e662bfa85ca917f2aa2085f7}{$\sim$\+Graph\+Builder} ()=default
+\begin{DoxyCompactList}\small\item\em $\sim$\+Graph\+Builder -\/ destructor \end{DoxyCompactList}\item 
+\hyperlink{a00007_a616bc8b7bcebcd695066b1c77bff0d58_a616bc8b7bcebcd695066b1c77bff0d58}{Graph\+Builder} (const \hyperlink{a00007}{Graph\+Builder} \&)=delete
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00007}{Graph\+Builder} -\/ copy constructor, is forbidden because the signals are not copied. \end{DoxyCompactList}\item 
+\hyperlink{a00007_a63a7bf449c4341c57ac11292683fe4b5_a63a7bf449c4341c57ac11292683fe4b5}{Graph\+Builder} (\hyperlink{a00007}{Graph\+Builder} \&\&)=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00007}{Graph\+Builder} -\/ move constructor. \end{DoxyCompactList}\item 
+\hyperlink{a00007}{Graph\+Builder} \& \hyperlink{a00007_ad25912e3925a0b5d272e439c133dbaed_ad25912e3925a0b5d272e439c133dbaed}{operator=} (const \hyperlink{a00007}{Graph\+Builder} \&)=delete
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item copy assignment operator, is forbidden because the signals are not copied 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\hyperlink{a00007}{Graph\+Builder} \& \hyperlink{a00007_a956ae5330a7549448b3a65d18ef3256f_a956ae5330a7549448b3a65d18ef3256f}{operator=} (\hyperlink{a00007}{Graph\+Builder} \&\&)=default
+\begin{DoxyCompactList}\small\item\em move assignment operator \end{DoxyCompactList}\item 
+void \hyperlink{a00007_af93f9ccc6ee766b6e9103b0410118251_af93f9ccc6ee766b6e9103b0410118251}{build\+Graph} (const \hyperlink{a00037_a1f61bb8d119aded91f38ff564193177c_a1f61bb8d119aded91f38ff564193177c}{G\+R\+A\+P\+H\+\_\+\+F\+O\+R\+M\+AT} \&graph\+Format)
+\begin{DoxyCompactList}\small\item\em build\+Graph -\/ Returns a graph constructed from the input data read from the file \end{DoxyCompactList}\item 
+int \hyperlink{a00007_a1f87c00f0c33d05c43c303d944e98e20_a1f87c00f0c33d05c43c303d944e98e20}{vertex\+Count} () const 
+\item 
+unsigned long \hyperlink{a00007_ab11f2d747657833d8858412550213206_ab11f2d747657833d8858412550213206}{edge\+Count} () const 
+\item 
+const \hyperlink{a00037_aa7134896d837083f384364b56a32bb49_aa7134896d837083f384364b56a32bb49}{Edges\+List\+Graph\+View} \& \hyperlink{a00007_a92a552ca053196f8f86f6449f47ed795_a92a552ca053196f8f86f6449f47ed795}{get\+Edges\+List\+Graph\+View} () const 
+\item 
+const \hyperlink{a00037_af657481a4b0a05546de6e9c1023bd9f5_af657481a4b0a05546de6e9c1023bd9f5}{Adjacency\+Matrix\+Graph\+View} \& \hyperlink{a00007_a54d8756fc2746a29b5cdb99a731ee9fb_a54d8756fc2746a29b5cdb99a731ee9fb}{get\+Adjacency\+Matrix\+Graph\+View} () const 
+\item 
+void \hyperlink{a00007_ae1e8d98a704fa5a7a5ad316259d95d6b_ae1e8d98a704fa5a7a5ad316259d95d6b}{set\+Filename} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em set\+Filename -\/ setter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00037_aa7134896d837083f384364b56a32bb49_aa7134896d837083f384364b56a32bb49}{Edges\+List\+Graph\+View} \hyperlink{a00007_a389733fa38c215c3130be5ad97a60243_a389733fa38c215c3130be5ad97a60243}{build\+Edges\+List\+Graph\+View} ()
+\begin{DoxyCompactList}\small\item\em build\+Edges\+List\+Graph\+View -\/ build a graph as list of edges from the input data read from the file \end{DoxyCompactList}\item 
+\hyperlink{a00037_af657481a4b0a05546de6e9c1023bd9f5_af657481a4b0a05546de6e9c1023bd9f5}{Adjacency\+Matrix\+Graph\+View} \& \hyperlink{a00007_a8e00e4f2ef074a816e3c530fda55cca1_a8e00e4f2ef074a816e3c530fda55cca1}{build\+Adjacency\+Matrix\+Graph\+View} ()
+\begin{DoxyCompactList}\small\item\em build\+Adjacency\+Matrix\+Graph\+View -\/ build a graph as adjacency matrix from the input data read from the file \end{DoxyCompactList}\item 
+bool \hyperlink{a00007_ad40e02849e59b544cf33fe279f325e5f_ad40e02849e59b544cf33fe279f325e5f}{is\+Valid\+Graph} (const int vertex, const size\+\_\+t edge)
+\begin{DoxyCompactList}\small\item\em is\+Valid\+Graph \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{a00007_a49e700993aec96bffaa4728eca205731_a49e700993aec96bffaa4728eca205731}{filename\+\_\+}
+\begin{DoxyCompactList}\small\item\em filename\+\_\+ -\/ input filename \end{DoxyCompactList}\item 
+int \hyperlink{a00007_ae1613c30ca3542a05340fb9b355ed994_ae1613c30ca3542a05340fb9b355ed994}{vertex\+Count\+\_\+}
+\begin{DoxyCompactList}\small\item\em vertex\+Count\+\_\+ -\/ number of vertices in the graph \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{a00007_a8e9f0fc598b4370e04a32b926c9baf81_a8e9f0fc598b4370e04a32b926c9baf81}{edge\+Count\+\_\+}
+\begin{DoxyCompactList}\small\item\em edge\+Count -\/ number of edges in the graph \end{DoxyCompactList}\item 
+\hyperlink{a00037_aa7134896d837083f384364b56a32bb49_aa7134896d837083f384364b56a32bb49}{Edges\+List\+Graph\+View} \hyperlink{a00007_ab85998431c78d73435592bc472244b5d_ab85998431c78d73435592bc472244b5d}{edges\+List\+Graph\+View\+\_\+}
+\begin{DoxyCompactList}\small\item\em edges\+List\+Graph\+View\+\_\+ -\/ current graph as edges list view \end{DoxyCompactList}\item 
+\hyperlink{a00037_af657481a4b0a05546de6e9c1023bd9f5_af657481a4b0a05546de6e9c1023bd9f5}{Adjacency\+Matrix\+Graph\+View} \hyperlink{a00007_ac8870c2e19f956a34ca926a8f8ec43c7_ac8870c2e19f956a34ca926a8f8ec43c7}{adjacency\+Matrix\+Graph\+View\+\_\+}
+\begin{DoxyCompactList}\small\item\em adjacency\+Matrix\+Graph\+View\+\_\+ -\/ current graph as adjacency matrix view \end{DoxyCompactList}\item 
+const unsigned int \hyperlink{a00007_ac15969ca7cebe4751ebfc0b4c5f4e060_ac15969ca7cebe4751ebfc0b4c5f4e060}{E\+D\+G\+E\+\_\+\+P\+A\+R\+M\+\_\+\+C\+O\+U\+NT} = 3
+\begin{DoxyCompactList}\small\item\em E\+D\+G\+E\+\_\+\+P\+A\+R\+M\+\_\+\+C\+O\+U\+NT -\/ count of edge parameters\+: input vertex, output vertex, cost. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+input file and build graph as list of edges or adjacency matrix 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!Graph\+Builder@{Graph\+Builder}}
+\index{Graph\+Builder@{Graph\+Builder}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{Graph\+Builder(const std\+::string \&filename)}{GraphBuilder(const std::string &filename)}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::\+Graph\+Builder (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{a00007_af8e42b34ae946ec91a86daea07379bb4_af8e42b34ae946ec91a86daea07379bb4}{}\label{a00007_af8e42b34ae946ec91a86daea07379bb4_af8e42b34ae946ec91a86daea07379bb4}
+
+
+\hyperlink{a00007}{Graph\+Builder} -\/ constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & input filename \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+12                 : \hyperlink{a00007_a49e700993aec96bffaa4728eca205731_a49e700993aec96bffaa4728eca205731}{filename\_}(filename) \{\}
+\end{DoxyCode}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!````~Graph\+Builder@{$\sim$\+Graph\+Builder}}
+\index{````~Graph\+Builder@{$\sim$\+Graph\+Builder}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{$\sim$\+Graph\+Builder()=default}{~GraphBuilder()=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::$\sim$\+Graph\+Builder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00007_a63770862e662bfa85ca917f2aa2085f7_a63770862e662bfa85ca917f2aa2085f7}{}\label{a00007_a63770862e662bfa85ca917f2aa2085f7_a63770862e662bfa85ca917f2aa2085f7}
+
+
+$\sim$\+Graph\+Builder -\/ destructor 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!Graph\+Builder@{Graph\+Builder}}
+\index{Graph\+Builder@{Graph\+Builder}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{Graph\+Builder(const Graph\+Builder \&)=delete}{GraphBuilder(const GraphBuilder &)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::\+Graph\+Builder (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graph\+Builder} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{a00007_a616bc8b7bcebcd695066b1c77bff0d58_a616bc8b7bcebcd695066b1c77bff0d58}{}\label{a00007_a616bc8b7bcebcd695066b1c77bff0d58_a616bc8b7bcebcd695066b1c77bff0d58}
+
+
+\hyperlink{a00007}{Graph\+Builder} -\/ copy constructor, is forbidden because the signals are not copied. 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!Graph\+Builder@{Graph\+Builder}}
+\index{Graph\+Builder@{Graph\+Builder}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{Graph\+Builder(\+Graph\+Builder \&\&)=default}{GraphBuilder(GraphBuilder &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::\+Graph\+Builder (
+\begin{DoxyParamCaption}
+\item[{{\bf Graph\+Builder} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00007_a63a7bf449c4341c57ac11292683fe4b5_a63a7bf449c4341c57ac11292683fe4b5}{}\label{a00007_a63a7bf449c4341c57ac11292683fe4b5_a63a7bf449c4341c57ac11292683fe4b5}
+
+
+\hyperlink{a00007}{Graph\+Builder} -\/ move constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!build\+Adjacency\+Matrix\+Graph\+View@{build\+Adjacency\+Matrix\+Graph\+View}}
+\index{build\+Adjacency\+Matrix\+Graph\+View@{build\+Adjacency\+Matrix\+Graph\+View}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{build\+Adjacency\+Matrix\+Graph\+View()}{buildAdjacencyMatrixGraphView()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adjacency\+Matrix\+Graph\+View} \& min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::build\+Adjacency\+Matrix\+Graph\+View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00007_a8e00e4f2ef074a816e3c530fda55cca1_a8e00e4f2ef074a816e3c530fda55cca1}{}\label{a00007_a8e00e4f2ef074a816e3c530fda55cca1_a8e00e4f2ef074a816e3c530fda55cca1}
+
+
+build\+Adjacency\+Matrix\+Graph\+View -\/ build a graph as adjacency matrix from the input data read from the file 
+
+
+\begin{DoxyCode}
+64                                                                               \{
+65             \hyperlink{a00007_ac8870c2e19f956a34ca926a8f8ec43c7_ac8870c2e19f956a34ca926a8f8ec43c7}{adjacencyMatrixGraphView\_}.reserve(100);
+66             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} v:\hyperlink{a00007_ac8870c2e19f956a34ca926a8f8ec43c7_ac8870c2e19f956a34ca926a8f8ec43c7}{adjacencyMatrixGraphView\_}) \{
+67                 v.reserve(100);
+68                 v = \{-1\};
+69             \}
+70             \textcolor{keywordflow}{return} \hyperlink{a00007_ac8870c2e19f956a34ca926a8f8ec43c7_ac8870c2e19f956a34ca926a8f8ec43c7}{adjacencyMatrixGraphView\_};
+71         \}\textcolor{comment}{//buildAdjacencyMatrixGraphView}
+\end{DoxyCode}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!build\+Edges\+List\+Graph\+View@{build\+Edges\+List\+Graph\+View}}
+\index{build\+Edges\+List\+Graph\+View@{build\+Edges\+List\+Graph\+View}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{build\+Edges\+List\+Graph\+View()}{buildEdgesListGraphView()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edges\+List\+Graph\+View} min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::build\+Edges\+List\+Graph\+View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00007_a389733fa38c215c3130be5ad97a60243_a389733fa38c215c3130be5ad97a60243}{}\label{a00007_a389733fa38c215c3130be5ad97a60243_a389733fa38c215c3130be5ad97a60243}
+
+
+build\+Edges\+List\+Graph\+View -\/ build a graph as list of edges from the input data read from the file 
+
+
+\begin{DoxyCode}
+14                                                                  \{
+15             \hyperlink{a00037_aa7134896d837083f384364b56a32bb49_aa7134896d837083f384364b56a32bb49}{EdgesListGraphView} graph;
+16             std::ifstream input(\hyperlink{a00007_a49e700993aec96bffaa4728eca205731_a49e700993aec96bffaa4728eca205731}{filename\_});
+17             \textcolor{keywordflow}{if} (!input.is\_open()) \{
+18                 \textcolor{keywordflow}{throw} std::runtime\_error((\textcolor{stringliteral}{"cannot open file "}) + \hyperlink{a00007_a49e700993aec96bffaa4728eca205731_a49e700993aec96bffaa4728eca205731}{filename\_});
+19             \}
+20             std::string line;
+21             \textcolor{keywordtype}{int} tmp1 = 0;
+22             \textcolor{keywordtype}{int} tmp2 = 0;
+23             \textcolor{keywordflow}{while} (getline(input, line)) \{\textcolor{comment}{//read next line}
+24                 std::vector<std::string> array;
+25                 boost::algorithm::split(array, line, boost::is\_any\_of(\textcolor{stringliteral}{":"}));\textcolor{comment}{//split input data}
+26                 \textcolor{keywordflow}{if} (array.size() != \hyperlink{a00007_ac15969ca7cebe4751ebfc0b4c5f4e060_ac15969ca7cebe4751ebfc0b4c5f4e060}{EDGE\_PARM\_COUNT}) \{
+27                     \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"invalid data format"});
+28                 \}
+29                 Edge edge\{\};
+30                 edge.inVertex = std::stoi(array[0]);
+31                 edge.cost = std::stoi(array[1]);
+32                 edge.outVertex = std::stoi(array[2]);
+33                 \textcolor{keywordflow}{if} (!edge.isValid()) \{
+34                     \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"invalid value edge"});
+35                 \}
+36                 tmp1 = std::max(edge.inVertex, tmp1);\textcolor{comment}{//for calculation number of vertices}
+37                 tmp2 = std::max(edge.outVertex, tmp2);
+38                 graph.push\_back(edge);
+39             \}
+40 
+41             \hyperlink{a00007_a8e9f0fc598b4370e04a32b926c9baf81_a8e9f0fc598b4370e04a32b926c9baf81}{edgeCount\_} = graph.size();
+42             \hyperlink{a00007_ae1613c30ca3542a05340fb9b355ed994_ae1613c30ca3542a05340fb9b355ed994}{vertexCount\_} = std::max(tmp1, tmp2);\textcolor{comment}{//определяем количество вершин}
+43             input.close();
+44             \textcolor{keywordflow}{if} (!\hyperlink{a00007_ad40e02849e59b544cf33fe279f325e5f_ad40e02849e59b544cf33fe279f325e5f}{isValidGraph}(\hyperlink{a00007_ae1613c30ca3542a05340fb9b355ed994_ae1613c30ca3542a05340fb9b355ed994}{vertexCount\_}, \hyperlink{a00007_a8e9f0fc598b4370e04a32b926c9baf81_a8e9f0fc598b4370e04a32b926c9baf81}{edgeCount\_})) \{
+45                 \textcolor{keywordflow}{throw} std::logic\_error(\textcolor{stringliteral}{"invalid edges count,"}
+46                                                \textcolor{stringliteral}{"max edges count = n(n-1)/2, n - number of vertices"});
+47             \}
+48             \textcolor{keywordflow}{return} graph;
+49         \}\textcolor{comment}{//buildEdgesListGraphView}
+\end{DoxyCode}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!build\+Graph@{build\+Graph}}
+\index{build\+Graph@{build\+Graph}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{build\+Graph(const G\+R\+A\+P\+H\+\_\+\+F\+O\+R\+M\+A\+T \&graph\+Format)}{buildGraph(const GRAPH_FORMAT &graphFormat)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::build\+Graph (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+R\+A\+P\+H\+\_\+\+F\+O\+R\+M\+AT} \&}]{graph\+Format}
+\end{DoxyParamCaption}
+)}\hypertarget{a00007_af93f9ccc6ee766b6e9103b0410118251_af93f9ccc6ee766b6e9103b0410118251}{}\label{a00007_af93f9ccc6ee766b6e9103b0410118251_af93f9ccc6ee766b6e9103b0410118251}
+
+
+build\+Graph -\/ Returns a graph constructed from the input data read from the file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+Format} & -\/ graph view format\+: list of edges, adjacency matrix \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+51                                                                      \{
+52             \textcolor{keywordflow}{switch} (graphFormat) \{
+53                 \textcolor{keywordflow}{case} GRAPH\_FORMAT::EDGE\_LIST: \{
+54                     \hyperlink{a00007_ab85998431c78d73435592bc472244b5d_ab85998431c78d73435592bc472244b5d}{edgesListGraphView\_} = 
+      \hyperlink{a00007_a389733fa38c215c3130be5ad97a60243_a389733fa38c215c3130be5ad97a60243}{buildEdgesListGraphView}();
+55                     \textcolor{keywordflow}{break};
+56                 \}
+57                 \textcolor{keywordflow}{case} GRAPH\_FORMAT::ADJACENCY\_MATRIX: \{
+58                     \hyperlink{a00007_ac8870c2e19f956a34ca926a8f8ec43c7_ac8870c2e19f956a34ca926a8f8ec43c7}{adjacencyMatrixGraphView\_} = 
+      \hyperlink{a00007_a8e00e4f2ef074a816e3c530fda55cca1_a8e00e4f2ef074a816e3c530fda55cca1}{buildAdjacencyMatrixGraphView}();
+59                     \textcolor{keywordflow}{break};
+60                 \}
+61             \}
+62         \}\textcolor{comment}{//buildGraph}
+\end{DoxyCode}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!edge\+Count@{edge\+Count}}
+\index{edge\+Count@{edge\+Count}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{edge\+Count() const }{edgeCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::edge\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{a00007_ab11f2d747657833d8858412550213206_ab11f2d747657833d8858412550213206}{}\label{a00007_ab11f2d747657833d8858412550213206_ab11f2d747657833d8858412550213206}
+\begin{DoxyReturn}{Returns}
+-\/ count of edges in the graph 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+82                                                     \{
+83             \textcolor{keywordflow}{return} \hyperlink{a00007_a8e9f0fc598b4370e04a32b926c9baf81_a8e9f0fc598b4370e04a32b926c9baf81}{edgeCount\_};
+84         \}\textcolor{comment}{//edgeCount}
+\end{DoxyCode}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!get\+Adjacency\+Matrix\+Graph\+View@{get\+Adjacency\+Matrix\+Graph\+View}}
+\index{get\+Adjacency\+Matrix\+Graph\+View@{get\+Adjacency\+Matrix\+Graph\+View}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{get\+Adjacency\+Matrix\+Graph\+View() const }{getAdjacencyMatrixGraphView() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Adjacency\+Matrix\+Graph\+View} \& min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::get\+Adjacency\+Matrix\+Graph\+View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{a00007_a54d8756fc2746a29b5cdb99a731ee9fb_a54d8756fc2746a29b5cdb99a731ee9fb}{}\label{a00007_a54d8756fc2746a29b5cdb99a731ee9fb_a54d8756fc2746a29b5cdb99a731ee9fb}
+\begin{DoxyReturn}{Returns}
+graph as adjacency matrix 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+90                                                                                         \{
+91             \textcolor{keywordflow}{return} \hyperlink{a00007_ac8870c2e19f956a34ca926a8f8ec43c7_ac8870c2e19f956a34ca926a8f8ec43c7}{adjacencyMatrixGraphView\_};
+92         \}\textcolor{comment}{//getEdgesListGraphView}
+\end{DoxyCode}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!get\+Edges\+List\+Graph\+View@{get\+Edges\+List\+Graph\+View}}
+\index{get\+Edges\+List\+Graph\+View@{get\+Edges\+List\+Graph\+View}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{get\+Edges\+List\+Graph\+View() const }{getEdgesListGraphView() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Edges\+List\+Graph\+View} \& min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::get\+Edges\+List\+Graph\+View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{a00007_a92a552ca053196f8f86f6449f47ed795_a92a552ca053196f8f86f6449f47ed795}{}\label{a00007_a92a552ca053196f8f86f6449f47ed795_a92a552ca053196f8f86f6449f47ed795}
+\begin{DoxyReturn}{Returns}
+-\/ graph as list of edges 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+86                                                                             \{
+87             \textcolor{keywordflow}{return} \hyperlink{a00007_ab85998431c78d73435592bc472244b5d_ab85998431c78d73435592bc472244b5d}{edgesListGraphView\_};
+88         \}\textcolor{comment}{//getEdgesListGraphView}
+\end{DoxyCode}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!is\+Valid\+Graph@{is\+Valid\+Graph}}
+\index{is\+Valid\+Graph@{is\+Valid\+Graph}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{is\+Valid\+Graph(const int vertex, const size\+\_\+t edge)}{isValidGraph(const int vertex, const size_t edge)}}]{\setlength{\rightskip}{0pt plus 5cm}bool min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::is\+Valid\+Graph (
+\begin{DoxyParamCaption}
+\item[{const int}]{vertex, }
+\item[{const size\+\_\+t}]{edge}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00007_ad40e02849e59b544cf33fe279f325e5f_ad40e02849e59b544cf33fe279f325e5f}{}\label{a00007_ad40e02849e59b544cf33fe279f325e5f_ad40e02849e59b544cf33fe279f325e5f}
+
+
+is\+Valid\+Graph 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & -\/ number of vertices \\
+\hline
+{\em edge} & -\/ number of edges \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true, if edges\+Number(max of edges number in the graph) $<$= n(n -\/ 1)/2, 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+73                                                                            \{
+74             \textcolor{keywordflow}{return} (edge >= 1) &&
+75                    (edge <= ((vertex * (vertex - 1)) / 2));\textcolor{comment}{//max edges count = n(n-1)/2, n - number of
+       vertices}
+76         \}\textcolor{comment}{//isValidGraph}
+\end{DoxyCode}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{operator=(const Graph\+Builder \&)=delete}{operator=(const GraphBuilder &)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph\+Builder}\& min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graph\+Builder} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\hypertarget{a00007_ad25912e3925a0b5d272e439c133dbaed_ad25912e3925a0b5d272e439c133dbaed}{}\label{a00007_ad25912e3925a0b5d272e439c133dbaed_ad25912e3925a0b5d272e439c133dbaed}
+
+
+
+\begin{DoxyItemize}
+\item copy assignment operator, is forbidden because the signals are not copied 
+\end{DoxyItemize}
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!operator=@{operator=}}
+\index{operator=@{operator=}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{operator=(\+Graph\+Builder \&\&)=default}{operator=(GraphBuilder &&)=default}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph\+Builder}\& min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Graph\+Builder} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{a00007_a956ae5330a7549448b3a65d18ef3256f_a956ae5330a7549448b3a65d18ef3256f}{}\label{a00007_a956ae5330a7549448b3a65d18ef3256f_a956ae5330a7549448b3a65d18ef3256f}
+
+
+move assignment operator 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!set\+Filename@{set\+Filename}}
+\index{set\+Filename@{set\+Filename}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{set\+Filename(const std\+::string \&filename)}{setFilename(const std::string &filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::set\+Filename (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{a00007_ae1e8d98a704fa5a7a5ad316259d95d6b_ae1e8d98a704fa5a7a5ad316259d95d6b}{}\label{a00007_ae1e8d98a704fa5a7a5ad316259d95d6b_ae1e8d98a704fa5a7a5ad316259d95d6b}
+
+
+set\+Filename -\/ setter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ input filename \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+94                                                                 \{
+95             \hyperlink{a00007_a49e700993aec96bffaa4728eca205731_a49e700993aec96bffaa4728eca205731}{filename\_} = filename;
+96         \}\textcolor{comment}{//setFilename}
+\end{DoxyCode}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!vertex\+Count@{vertex\+Count}}
+\index{vertex\+Count@{vertex\+Count}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{vertex\+Count() const }{vertexCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::vertex\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{a00007_a1f87c00f0c33d05c43c303d944e98e20_a1f87c00f0c33d05c43c303d944e98e20}{}\label{a00007_a1f87c00f0c33d05c43c303d944e98e20_a1f87c00f0c33d05c43c303d944e98e20}
+\begin{DoxyReturn}{Returns}
+-\/ count of vertices in the graph 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+78                                             \{
+79             \textcolor{keywordflow}{return} \hyperlink{a00007_ae1613c30ca3542a05340fb9b355ed994_ae1613c30ca3542a05340fb9b355ed994}{vertexCount\_};
+80         \}\textcolor{comment}{//vertexCount}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!adjacency\+Matrix\+Graph\+View\+\_\+@{adjacency\+Matrix\+Graph\+View\+\_\+}}
+\index{adjacency\+Matrix\+Graph\+View\+\_\+@{adjacency\+Matrix\+Graph\+View\+\_\+}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{adjacency\+Matrix\+Graph\+View\+\_\+}{adjacencyMatrixGraphView_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adjacency\+Matrix\+Graph\+View} min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::adjacency\+Matrix\+Graph\+View\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00007_ac8870c2e19f956a34ca926a8f8ec43c7_ac8870c2e19f956a34ca926a8f8ec43c7}{}\label{a00007_ac8870c2e19f956a34ca926a8f8ec43c7_ac8870c2e19f956a34ca926a8f8ec43c7}
+
+
+adjacency\+Matrix\+Graph\+View\+\_\+ -\/ current graph as adjacency matrix view 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!E\+D\+G\+E\+\_\+\+P\+A\+R\+M\+\_\+\+C\+O\+U\+NT@{E\+D\+G\+E\+\_\+\+P\+A\+R\+M\+\_\+\+C\+O\+U\+NT}}
+\index{E\+D\+G\+E\+\_\+\+P\+A\+R\+M\+\_\+\+C\+O\+U\+NT@{E\+D\+G\+E\+\_\+\+P\+A\+R\+M\+\_\+\+C\+O\+U\+NT}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{E\+D\+G\+E\+\_\+\+P\+A\+R\+M\+\_\+\+C\+O\+U\+NT}{EDGE_PARM_COUNT}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::\+E\+D\+G\+E\+\_\+\+P\+A\+R\+M\+\_\+\+C\+O\+U\+NT = 3\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00007_ac15969ca7cebe4751ebfc0b4c5f4e060_ac15969ca7cebe4751ebfc0b4c5f4e060}{}\label{a00007_ac15969ca7cebe4751ebfc0b4c5f4e060_ac15969ca7cebe4751ebfc0b4c5f4e060}
+
+
+E\+D\+G\+E\+\_\+\+P\+A\+R\+M\+\_\+\+C\+O\+U\+NT -\/ count of edge parameters\+: input vertex, output vertex, cost. 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!edge\+Count\+\_\+@{edge\+Count\+\_\+}}
+\index{edge\+Count\+\_\+@{edge\+Count\+\_\+}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{edge\+Count\+\_\+}{edgeCount_}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::edge\+Count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00007_a8e9f0fc598b4370e04a32b926c9baf81_a8e9f0fc598b4370e04a32b926c9baf81}{}\label{a00007_a8e9f0fc598b4370e04a32b926c9baf81_a8e9f0fc598b4370e04a32b926c9baf81}
+
+
+edge\+Count -\/ number of edges in the graph 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!edges\+List\+Graph\+View\+\_\+@{edges\+List\+Graph\+View\+\_\+}}
+\index{edges\+List\+Graph\+View\+\_\+@{edges\+List\+Graph\+View\+\_\+}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{edges\+List\+Graph\+View\+\_\+}{edgesListGraphView_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edges\+List\+Graph\+View} min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::edges\+List\+Graph\+View\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00007_ab85998431c78d73435592bc472244b5d_ab85998431c78d73435592bc472244b5d}{}\label{a00007_ab85998431c78d73435592bc472244b5d_ab85998431c78d73435592bc472244b5d}
+
+
+edges\+List\+Graph\+View\+\_\+ -\/ current graph as edges list view 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!filename\+\_\+@{filename\+\_\+}}
+\index{filename\+\_\+@{filename\+\_\+}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{filename\+\_\+}{filename_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::filename\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00007_a49e700993aec96bffaa4728eca205731_a49e700993aec96bffaa4728eca205731}{}\label{a00007_a49e700993aec96bffaa4728eca205731_a49e700993aec96bffaa4728eca205731}
+
+
+filename\+\_\+ -\/ input filename 
+
+\index{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}!vertex\+Count\+\_\+@{vertex\+Count\+\_\+}}
+\index{vertex\+Count\+\_\+@{vertex\+Count\+\_\+}!min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder@{min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder}}
+\subsubsection[{\texorpdfstring{vertex\+Count\+\_\+}{vertexCount_}}]{\setlength{\rightskip}{0pt plus 5cm}int min\+\_\+path\+::graph\+\_\+builder\+::\+Graph\+Builder\+::vertex\+Count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{a00007_ae1613c30ca3542a05340fb9b355ed994_ae1613c30ca3542a05340fb9b355ed994}{}\label{a00007_ae1613c30ca3542a05340fb9b355ed994_ae1613c30ca3542a05340fb9b355ed994}
+
+
+vertex\+Count\+\_\+ -\/ number of vertices in the graph 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/include/graph\+\_\+builder/\hyperlink{a00020}{graph\+\_\+builder.\+hpp}\item 
+/home/boa/\+C\+Lion\+Projects/min\+\_\+path/command\+\_\+handler/src/graph\+\_\+builder/\hyperlink{a00026}{graph\+\_\+builder.\+cpp}\end{DoxyCompactItemize}
