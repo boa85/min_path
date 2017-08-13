@@ -6,10 +6,19 @@
 #include <string>
 
 #include "icommand.hpp"
+#include "../../service/include/service.hpp"
+#include "graph_builder/graph_builder.hpp"
 
 namespace min_path {
 
     namespace command_handler {
+
+        using namespace service;
+        using namespace graph_builder;
+
+        /**
+         * @class FindShortestPathCommand
+         */
         class FindShortestPathCommand : public ICommand {
         public:
 
@@ -23,7 +32,7 @@ namespace min_path {
                                     unsigned int outVertex);
 
             /**
-             * @brief ~ShortestPathComman - destructor
+             * @brief ~ShortestPathCommand - destructor
              */
             ~FindShortestPathCommand() override = default;
 
@@ -69,6 +78,23 @@ namespace min_path {
              */
             const unsigned int outVertex_;
 
+        private:
+            /**
+             * @@brief fordBellman - the classical implementation of the Ford-Bellman algorithm
+             * @param graph - a list of edges of the graph
+             * @param vertexCount - number of vertices
+             * @param edgesCount - number of edges
+             */
+            void fordBellman(const EdgesListGraphView &graph, int vertexCount, unsigned long edgesCount);
+
+            /**
+             * @brief isValidVertices - check the
+             * @param graph
+             * @return
+             */
+            bool isValidVertices(const EdgesListGraphView &graph);
+
+            int calculatePathLength(const std::vector<int> &path, const EdgesListGraphView &graph);
         };//class FindShortestPathCommand
 
     }//namespace command_handler
