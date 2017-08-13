@@ -18,9 +18,11 @@ namespace min_path {
         namespace fs=boost::filesystem;
 
         struct Edge {
+            Edge() = default;
             int inVertex;
             int outVertex;
             int cost;
+
             bool isValid() {
                 return inVertex > 0 && outVertex > 0;
             }
@@ -30,9 +32,14 @@ namespace min_path {
             EDGE_LIST,
             ADJACENCY_MATRIX
         };
+        /**
+         * @typedef EdgesListGraphView - list of edges
+         */
+        typedef std::vector<Edge> EdgesListGraphView;
 
-        using EdgesListGraphView = std::vector<Edge>;
-
+        /**
+         * @typedef adiacency matrix
+         */
         using AdjacencyMatrixGraphView = std::vector<std::vector<int> >;
 
 
