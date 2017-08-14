@@ -14,12 +14,15 @@
 ### Установка зависимостей для сборки на Ubuntu 16.04:
 *      sudo apt install git build-essential cmake  libboost-all-dev libboost-filesystem1.58.0 libboost-program-options1.58.0
 ### Сборка проекта
-
+Скачать исходный код проекта:
 *      git clone https://github.com/boa85/min_path.git
+Перейти в каталог с исходным кодом:
 *      cd ${project_source_dir}
-*      mkdir cmake-build-debug
-*      cd cmake-build-debug/
+Создание дирректории для работы cmake и переход в неё:
+*      mkdir cmake-build-debug &&  cd cmake-build-debug/
+Запуск cmake для генерации Makefile:
 *      cmake ..
+Сборка проекта:
 *      make
 
 ###  Запуск
